@@ -183,8 +183,8 @@ export function ServicesPage() {
                   key={index}
                   className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 p-8 shadow-lg hover:shadow-2xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-3"
                 >
-                  <div className="flex items-start space-x-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white flex-shrink-0">
+                  <div className="flex items-start md:space-x-6">
+                    <div className="hidden md:inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white flex-shrink-0">
                       <service.icon className="h-8 w-8" />
                     </div>
                     <div className="flex-1 space-y-4">

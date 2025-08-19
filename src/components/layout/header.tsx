@@ -80,7 +80,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 border-b border-gray-200 shadow-xl backdrop-blur-sm">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-xl">
             <div className="px-4 py-6">
               <nav className="space-y-3">
                 {navigation.map((item) => (
