@@ -15,6 +15,10 @@
   padding: var(--space-12) 0;
 }
 
+.section-compact {
+  padding: var(--space-10) 0;
+}
+
 .section-lg {
   padding: var(--space-32) 0;
 }

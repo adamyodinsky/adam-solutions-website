@@ -278,6 +278,42 @@
   -webkit-box-orient: vertical;
 }
 
+/* Compact service card for better space utilization */
+.card-service-compact {
+  min-height: 240px;
+  max-height: 300px;
+}
+
+.card-service-compact .card-body {
+  padding: var(--space-5);
+  justify-content: center;
+}
+
+.card-service-compact .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0;
+}
+
+.card-service-compact .card-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-3);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card-service-compact .mb-3 {
+  margin-bottom: var(--space-3) !important;
+}
+
+.card-service-compact .fa-3x {
+  font-size: 2.75rem !important;
+}
+
 /* Mobile responsive adjustments for service cards */
 @media (max-width: 767px) {
   .card-service {
@@ -290,6 +326,23 @@
   }
   
   .card-service .card-text {
+    -webkit-line-clamp: none;
+    line-clamp: none;
+    overflow: visible;
+    display: block;
+    font-size: var(--font-size-sm);
+  }
+  
+  .card-service-compact {
+    min-height: auto;
+    max-height: none;
+  }
+  
+  .card-service-compact .card-body {
+    padding: var(--space-4);
+  }
+  
+  .card-service-compact .card-text {
     -webkit-line-clamp: none;
     line-clamp: none;
     overflow: visible;
