@@ -1,201 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description"
-        content="Adam Devop Solutions Ltd - Digital products & DevOps consulting. Circle app, Chatchapiti Kit, and professional software development services." />
-    <meta name="author" content="Adam Devop Solutions Ltd" />
-    <title>Adam DevOps Solutions Ltd - Digital Products & Software Consulting</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS-->
-    <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam DevOps Solutions Ltd - Digital Products & DevOps Consulting</title>
+  <meta name="description"
+    content="Professional DevOps consulting and digital products including Circle mobile app and ChatGPT-Kit Chrome extension. Expert software engineering services." />
+  <meta name="keywords"
+    content="DevOps, consulting, mobile app, Chrome extension, software engineering, digital products" />
+  <meta name="author" content="Adam DevOps Solutions Ltd" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adamsolutions.com/" />
+  <meta property="og:title" content="Adam DevOps Solutions Ltd - Digital Products & DevOps Consulting" />
+  <meta property="og:description"
+    content="Professional DevOps consulting and digital products including Circle mobile app and ChatGPT-Kit Chrome extension." />
+  <meta property="og:image" content="/src/assets/img/adam-solutions-logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://adamsolutions.com/" />
+  <meta property="twitter:title" content="Adam DevOps Solutions Ltd - Digital Products & DevOps Consulting" />
+  <meta property="twitter:description"
+    content="Professional DevOps consulting and digital products including Circle mobile app and ChatGPT-Kit Chrome extension." />
+  <meta property="twitter:image" content="/src/assets/img/adam-solutions-logo.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Adam DevOps Solutions Ltd",
+      "alternateName": "Adam Solutions",
+      "url": "https://adamsolutions.com",
+      "logo": "https://adamsolutions.com/src/assets/img/adam-solutions-logo.png",
+      "description": "Professional DevOps consulting and digital products including Circle mobile app and ChatGPT-Kit Chrome extension.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "",
+        "contactType": "customer service",
+        "email": "info@adamsolutions.com"
+      },
+      "sameAs": []
+    }
+    </script>
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">Adam Solutions</a>
-            <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="navbar-nav" id="navbarNav">
-                <li><a class="nav-link" href="#home">Home</a></li>
-                <li><a class="nav-link" href="products.html">Products</a></li>
-                <li><a class="nav-link" href="services.html">Services</a></li>
-                <li><a class="nav-link" href="contact.html">Contact</a></li>
-                <li><a class="nav-link" href="policies.html">Policies</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Masthead-->
-    <header class="masthead" id="home">
-        <div class="container">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar" src="assets/img/logo.png" alt="Adam Solutions Logo" />
-            <!-- Masthead Heading-->
-            <h1 class="masthead-heading">Adam Solutions</h1>
-            <p class="masthead-subheading">
-                Digital Products & Software Consulting
-            </p>
-
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-
-            <p class="masthead-subheading mb-4">
-                Software Engineer | Fullstack - Platform - DevOps<br>
-                Mobile Developer | Digital Product Creator
-            </p>
-
-            <a href="products.html" class="btn btn-secondary btn-lg">View Our Products</a>
-        </div>
-    </header>
-
-    <!-- Overview Section -->
-    <section class="section bg-light" id="overview">
-        <div class="container">
-            <h2 class="section-heading">What We Offer</h2>
-            <div class="row">
-                <div class="col col-md-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt fa-3x text-secondary mb-3"></i>
-                            <h3 class="card-title">Digital Products</h3>
-                            <p class="card-text">
-                                Innovative mobile and web applications including <strong>Circle</strong> - our flagship
-                                mobile app,
-                                and <strong>Chatchapiti Kit</strong> - a powerful Chrome extension for enhanced
-                                productivity.
-                            </p>
-                            <a href="products.html" class="btn btn-outline">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-server fa-3x text-secondary mb-3"></i>
-                            <h3 class="card-title">DevOps Consulting</h3>
-                            <p class="card-text">
-                                Professional DevOps services including infrastructure automation, CI/CD pipelines,
-                                cloud architecture, and platform engineering solutions for businesses of all sizes.
-                            </p>
-                            <a href="services.html" class="btn btn-outline">Our Services</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-code fa-3x text-secondary mb-3"></i>
-                            <h3 class="card-title">Custom Development</h3>
-                            <p class="card-text">
-                                Full-stack application development, mobile app creation, and custom software solutions
-                                tailored to your specific business needs and requirements.
-                            </p>
-                            <a href="services.html" class="btn btn-outline">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Products Section -->
-    <section class="section" id="featured-products">
-        <div class="container">
-            <h2 class="section-heading">Featured Products</h2>
-            <div class="row">
-                <div class="col col-md-6">
-                    <div class="card">
-                        <img src="assets/img/circle/icon-512.png" alt="Circle App" class="card-img">
-                        <div class="card-body">
-                            <h3 class="card-title">Circle</h3>
-                            <p class="card-text">
-                                A revolutionary mobile application designed to enhance your digital experience.
-                                Available on mobile platforms with intuitive design and powerful features.
-                            </p>
-                            <ul class="feature-list">
-                                <li>Cross-platform mobile compatibility</li>
-                                <li>Intuitive user interface</li>
-                                <li>Advanced functionality</li>
-                                <li>Regular updates and support</li>
-                            </ul>
-                            <a href="products.html#circle" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-6">
-                    <div class="card">
-                        <img src="assets/img/portfolio/game.png" alt="Chatchapiti Kit" class="card-img">
-                        <div class="card-body">
-                            <h3 class="card-title">Chatchapiti Kit</h3>
-                            <p class="card-text">
-                                A powerful Chrome extension that enhances your browsing experience with advanced tools
-                                and productivity features. Available as a subscription service.
-                            </p>
-                            <ul class="feature-list">
-                                <li>Chrome browser integration</li>
-                                <li>Productivity enhancement tools</li>
-                                <li>Subscription-based service</li>
-                                <li>Regular feature updates</li>
-                            </ul>
-                            <a href="products.html#chatchapiti" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="section bg-primary text-white text-center">
-        <div class="container">
-            <h2 class="section-heading text-white">Ready to Get Started?</h2>
-            <p class="mb-4" style="font-size: 1.25rem;">
-                Whether you need our digital products or professional services, we're here to help you succeed.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="products.html" class="btn btn-secondary btn-lg">View Products</a>
-                <a href="contact.html" class="btn btn-outline btn-lg" style="border-color: white; color: white;">Contact
-                    Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-                <a href="policies.html">Policies</a>
-            </div>
-            <p class="footer-text">
-                © 2024 Adam Devop Solutions Ltd. All rights reserved.<br>
-                Digital products delivered globally. Professional services worldwide.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
