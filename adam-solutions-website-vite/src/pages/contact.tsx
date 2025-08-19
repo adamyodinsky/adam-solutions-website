@@ -1,5 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
+import {
+  Mail,
+  MessageCircle,
+  Phone,
+  MapPin,
+  Sparkles,
+  Send,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 export function ContactPage() {
@@ -17,224 +27,276 @@ export function ContactPage() {
         />
       </Helmet>
 
-      <div className="container space-y-12 py-8 md:py-12 lg:py-24">
-        {/* Header */}
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <h1 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Contact Us
-          </h1>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Get in touch with us for professional consulting services, product
-            support, or any questions you may have. We're here to help!
-          </p>
-        </div>
+      {/* Hero Section */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-blue-50/30 to-indigo-50/50 dark:from-cyan-950/20 dark:via-blue-950/10 dark:to-indigo-950/20"></div>
+        <div className="absolute top-1/4 -left-4 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-1/3 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
 
+        <div className="container mx-auto relative">
+          <div className="mx-auto max-w-4xl text-center space-y-8">
+            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-cyan-600/10 to-blue-600/10 px-6 py-2 text-sm font-medium border border-cyan-200/20">
+              <Mail className="mr-2 h-4 w-4 text-cyan-600" />
+              Get In Touch
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-cyan-900 to-blue-900 dark:from-white dark:via-cyan-100 dark:to-blue-100 bg-clip-text text-transparent leading-tight">
+              Contact Us
+            </h1>
+
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Get in touch with us for professional consulting services, product
+              support, or any questions you may have. We're here to help!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto space-y-32 py-16">
         {/* Contact Methods */}
-        <div className="mx-auto max-w-[58rem] grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col items-center space-y-3 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <Mail className="h-6 w-6" />
-            </div>
-            <h3 className="font-semibold">Email</h3>
-            <p className="text-sm text-muted-foreground">
-              Primary contact method
-            </p>
-            <a
-              href="mailto:support@adamsolutions.com"
-              className="text-primary hover:underline"
-            >
-              support@adamsolutions.com
-            </a>
+        <section className="relative">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: Mail,
+                title: "Email",
+                description: "Primary contact method",
+                detail: "support@adamsolutions.com",
+                color: "from-red-500 to-pink-500",
+                bgColor:
+                  "from-red-50 to-pink-50 dark:from-red-950/20 dark:to-pink-950/20",
+              },
+              {
+                icon: MessageCircle,
+                title: "Live Chat",
+                description: "Quick questions & support",
+                detail: "Start Chat",
+                color: "from-green-500 to-emerald-500",
+                bgColor:
+                  "from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20",
+              },
+              {
+                icon: Phone,
+                title: "Phone",
+                description: "For urgent matters",
+                detail: "Available by appointment",
+                color: "from-blue-500 to-cyan-500",
+                bgColor:
+                  "from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20",
+              },
+              {
+                icon: MapPin,
+                title: "Location",
+                description: "Remote services",
+                detail: "Global availability",
+                color: "from-purple-500 to-indigo-500",
+                bgColor:
+                  "from-purple-50 to-indigo-50 dark:from-purple-950/20 dark:to-indigo-950/20",
+              },
+            ].map((method, index) => (
+              <div key={index} className="group relative">
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${method.bgColor} rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity`}
+                ></div>
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/5 group-hover:border-primary/20 text-center">
+                  <div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${method.color} text-white mb-6`}
+                  >
+                    <method.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{method.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {method.description}
+                  </p>
+                  {method.title === "Email" ? (
+                    <a
+                      href={`mailto:${method.detail}`}
+                      className="text-primary hover:underline font-medium"
+                    >
+                      {method.detail}
+                    </a>
+                  ) : method.title === "Live Chat" ? (
+                    <Button size="sm" variant="outline">
+                      {method.detail}
+                    </Button>
+                  ) : (
+                    <p className="text-sm font-medium">{method.detail}</p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
-
-          <div className="flex flex-col items-center space-y-3 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <MessageCircle className="h-6 w-6" />
-            </div>
-            <h3 className="font-semibold">Live Chat</h3>
-            <p className="text-sm text-muted-foreground">
-              Quick questions & support
-            </p>
-            <Button variant="outline" size="sm">
-              Start Chat
-            </Button>
-          </div>
-
-          <div className="flex flex-col items-center space-y-3 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <Phone className="h-6 w-6" />
-            </div>
-            <h3 className="font-semibold">Phone</h3>
-            <p className="text-sm text-muted-foreground">For urgent matters</p>
-            <p className="text-sm">Available by appointment</p>
-          </div>
-
-          <div className="flex flex-col items-center space-y-3 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <MapPin className="h-6 w-6" />
-            </div>
-            <h3 className="font-semibold">Location</h3>
-            <p className="text-sm text-muted-foreground">Remote services</p>
-            <p className="text-sm">Global availability</p>
-          </div>
-        </div>
+        </section>
 
         {/* Contact Form */}
-        <div className="mx-auto max-w-[58rem]">
-          <div className="rounded-lg border bg-card p-8">
-            <div className="space-y-6">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold">Send us a message</h2>
-                <p className="mt-2 text-muted-foreground">
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
+        <section className="relative">
+          <div className="grid gap-12 lg:grid-cols-2 items-start">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-4xl md:text-5xl font-bold">
+                  Send us a message
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Fill out the form and we'll get back to you as soon as
+                  possible. We typically respond within 24-48 hours.
                 </p>
               </div>
 
-              <form className="space-y-4">
-                <div className="grid gap-4 md:grid-cols-2">
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: CheckCircle,
+                    title: "Technical Issues",
+                    description:
+                      "For product-related technical issues, contact us within 14 days for support and potential exceptions.",
+                  },
+                  {
+                    icon: Clock,
+                    title: "Response Time",
+                    description:
+                      "We typically respond to all inquiries within 24-48 hours during business days.",
+                  },
+                  {
+                    icon: Sparkles,
+                    title: "Business Hours",
+                    description:
+                      "Monday - Friday: 9:00 AM - 6:00 PM (UTC). Weekend support available for urgent matters.",
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                      <item.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950/20 dark:to-blue-950/20 rounded-3xl opacity-50"></div>
+              <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50">
+                <form className="space-y-6">
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="firstName"
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        id="firstName"
+                        type="text"
+                        className="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        placeholder="Enter your first name"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="lastName"
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        id="lastName"
+                        type="text"
+                        className="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        placeholder="Enter your last name"
+                        required
+                      />
+                    </div>
+                  </div>
+
                   <div className="space-y-2">
                     <label
-                      htmlFor="firstName"
+                      htmlFor="email"
                       className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
-                      First Name
+                      Email
                     </label>
                     <input
-                      id="firstName"
-                      type="text"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Enter your first name"
+                      id="email"
+                      type="email"
+                      className="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      placeholder="Enter your email address"
                       required
                     />
                   </div>
+
                   <div className="space-y-2">
                     <label
-                      htmlFor="lastName"
+                      htmlFor="company"
                       className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
-                      Last Name
+                      Company (Optional)
                     </label>
                     <input
-                      id="lastName"
+                      id="company"
                       type="text"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Enter your last name"
+                      className="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Subject
+                    </label>
+                    <select
+                      id="subject"
+                      className="flex h-12 w-full rounded-xl border border-input bg-background/50 px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      required
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="consulting">DevOps Consulting</option>
+                      <option value="development">Software Development</option>
+                      <option value="products">Product Support</option>
+                      <option value="partnership">Partnership Inquiry</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="message"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={6}
+                      className="flex min-h-[120px] w-full rounded-xl border border-input bg-background/50 px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+                      placeholder="Tell us about your project or how we can help..."
                       required
                     />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white border-0 h-12"
                   >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Enter your email address"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="company"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Company (Optional)
-                  </label>
-                  <input
-                    id="company"
-                    type="text"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="subject"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Subject
-                  </label>
-                  <select
-                    id="subject"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    required
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="consulting">DevOps Consulting</option>
-                    <option value="development">Software Development</option>
-                    <option value="products">Product Support</option>
-                    <option value="partnership">Partnership Inquiry</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Tell us about your project or how we can help..."
-                    required
-                  />
-                </div>
-
-                <Button type="submit" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+                    <Send className="mr-2 h-5 w-5" />
+                    Send Message
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Support Information */}
-        <div className="mx-auto max-w-[58rem] space-y-8">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold">Support Information</h2>
-            <p className="mt-2 text-muted-foreground">
-              Additional ways to get help and support
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="text-center">
-              <h3 className="font-semibold">Technical Issues</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                For product-related technical issues, contact us within 14 days
-                for support and potential exceptions to our refund policy.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold">Response Time</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We typically respond to all inquiries within 24-48 hours during
-                business days.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold">Business Hours</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Monday - Friday: 9:00 AM - 6:00 PM (UTC)
-                <br />
-                Weekend support available for urgent matters.
-              </p>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </>
   );
