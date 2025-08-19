@@ -66,13 +66,16 @@ export function PoliciesPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative bg-gradient-to-br from-white via-gray-50/30 to-blue-50/20 py-20 md:py-28 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-green-100 to-blue-100 rounded-full blur-3xl opacity-15"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-black">
               Our Policies
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
               Straightforward policies for working with me. No legal
               mumbo-jumbo, just clear terms that make sense for both of us.
             </p>
@@ -84,9 +87,9 @@ export function PoliciesPage() {
         {/* Table of Contents */}
         <section className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="bg-white rounded-2xl p-12 border border-gray-200 max-w-4xl mx-auto scroll-animate">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 border border-gray-200/50 max-w-4xl mx-auto scroll-animate">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 mb-4">
                   <FileText className="h-8 w-8" />
                 </div>
                 <h2 className="text-2xl font-bold text-black">
@@ -98,10 +101,10 @@ export function PoliciesPage() {
                   <a
                     key={policy.id}
                     href={`#${policy.id}`}
-                    className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg hover:bg-gray-100 transition-all"
+                    className="bg-gray-50 rounded-xl p-6 border border-gray-200/50 hover:shadow-2xl hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:bg-gray-100 transition-all"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black text-white shadow-lg flex-shrink-0">
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black text-white shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 flex-shrink-0">
                         <policy.icon className="h-6 w-6" />
                       </div>
                       <div>
@@ -125,7 +128,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">
                   <RefreshCw className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -133,7 +136,7 @@ export function PoliciesPage() {
                 </h2>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 space-y-6">
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200/50 space-y-6">
                 <div className="flex items-start space-x-4">
                   <AlertTriangle className="h-6 w-6 text-gray-800 flex-shrink-0 mt-1" />
                   <div>
@@ -198,7 +201,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">
                   <Clock className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -206,7 +209,7 @@ export function PoliciesPage() {
                 </h2>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 border border-gray-200 space-y-6">
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 space-y-6">
                 <p className="text-gray-700 leading-relaxed">
                   This applies to subscription products like my{" "}
                   <strong className="text-black">ChatGPT-Kit</strong> Chrome
@@ -269,7 +272,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">
                   <FileText className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -277,7 +280,7 @@ export function PoliciesPage() {
                 </h2>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 space-y-8">
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200/50 space-y-8">
                 {[
                   {
                     title: "License & Usage Rights",
@@ -319,7 +322,7 @@ export function PoliciesPage() {
                 ))}
 
                 <div className="grid gap-6 md:grid-cols-2">
-                  <div className="bg-white rounded-xl p-6 border border-gray-200">
+                  <div className="bg-white rounded-xl p-6 border border-gray-200/50">
                     <h4 className="font-semibold text-black mb-3">
                       Service Availability
                     </h4>
@@ -329,7 +332,7 @@ export function PoliciesPage() {
                       when I can.
                     </p>
                   </div>
-                  <div className="bg-white rounded-xl p-6 border border-gray-200">
+                  <div className="bg-white rounded-xl p-6 border border-gray-200/50">
                     <h4 className="font-semibold text-black mb-3">
                       Privacy & Data
                     </h4>
@@ -361,7 +364,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">
                   <Globe className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -369,7 +372,7 @@ export function PoliciesPage() {
                 </h2>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 border border-gray-200 space-y-6">
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
                   {[
                     {
@@ -395,7 +398,7 @@ export function PoliciesPage() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="bg-gray-50 rounded-xl p-6 border border-gray-200"
+                      className="bg-gray-50 rounded-xl p-6 border border-gray-200/50"
                     >
                       <h4 className="font-semibold text-black mb-3">
                         {item.title}
@@ -407,7 +410,7 @@ export function PoliciesPage() {
                   ))}
                 </div>
 
-                <div className="bg-black text-white shadow-lg rounded-xl p-6">
+                <div className="bg-black text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 rounded-xl p-6">
                   <h4 className="font-semibold mb-3">Contact Information</h4>
                   <div className="text-sm leading-relaxed space-y-1">
                     <p>
@@ -424,9 +427,9 @@ export function PoliciesPage() {
         {/* Last Updated */}
         <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="bg-gray-50 rounded-2xl p-12 border border-gray-200 text-center max-w-4xl mx-auto scroll-animate">
+            <div className="bg-gray-50 rounded-2xl p-12 border border-gray-200/50 text-center max-w-4xl mx-auto scroll-animate">
               <div className="space-y-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black text-white shadow-lg mx-auto">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 mx-auto">
                   <User className="h-10 w-10" />
                 </div>
                 <div className="space-y-2">

@@ -147,8 +147,11 @@ export function HomePage() {
       </section>
 
       {/* Overview Section */}
-      <section className="bg-gray-50 py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative bg-gradient-to-br from-gray-50 via-gray-100/50 to-blue-50/10 py-20 md:py-28 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-10 right-20 w-64 h-64 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur-3xl opacity-15"></div>
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-gradient-to-r from-blue-100 to-green-100 rounded-full blur-3xl opacity-10"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center space-y-8 mb-16 scroll-animate">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
               What I Do
@@ -176,13 +179,13 @@ export function HomePage() {
                     real problems
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
-                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
                       Circle mobile app
                     </span>
-                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
                       ChatGPT-Kit extension
                     </span>
-                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
                       TerminalGPT CLI (1M+ downloads)
                     </span>
                   </div>
@@ -214,13 +217,13 @@ export function HomePage() {
                     I help startups build robust infrastructure and scale
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
-                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
                       CI/CD Pipelines
                     </span>
-                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
                       Cloud Architecture
                     </span>
-                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                    <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
                       Backend Systems
                     </span>
                   </div>
@@ -242,8 +245,10 @@ export function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative bg-gradient-to-br from-white via-gray-50/30 to-purple-50/10 py-20 md:py-28 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-green-100 to-blue-100 rounded-full blur-3xl opacity-10"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center space-y-8 mb-16 scroll-animate">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
               Why Work With Me?
@@ -289,8 +294,10 @@ export function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-50 py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative bg-gradient-to-br from-gray-50 via-gray-100/50 to-indigo-50/10 py-20 md:py-28 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full blur-3xl opacity-15"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center space-y-8 max-w-3xl mx-auto scroll-animate">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
               Ready to Get Started?

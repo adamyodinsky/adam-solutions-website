@@ -47,13 +47,13 @@ export function ProductsPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-4xl text-center space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-black">
               My Projects
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
               Here are some digital products I've built in my spare time. Both
               are live, have real users, and showcase different aspects of what
               I can create.
@@ -65,7 +65,7 @@ export function ProductsPage() {
       {/* Products */}
       <div className="space-y-16">
         {/* Circle App */}
-        <section className="bg-gray-50 py-16 md:py-24">
+        <section className="bg-gray-50 py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto scroll-animate">
               <div className="space-y-8">
@@ -109,7 +109,7 @@ export function ProductsPage() {
                   <Button
                     size="lg"
                     asChild
-                    className="bg-black hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
+                    className="bg-black hover:bg-gray-800 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                   >
                     <a
                       href="https://apps.apple.com/us/app/circle-real-connections/id6747255364"
@@ -124,7 +124,7 @@ export function ProductsPage() {
                     variant="outline"
                     size="lg"
                     asChild
-                    className="border-black text-black hover:bg-black hover:text-white shadow-md hover:shadow-lg"
+                    className="border-black text-black hover:bg-black hover:text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                   >
                     <a
                       href="https://play.google.com/store/apps/details?id=com.adamsolutions.circle"
@@ -151,7 +151,7 @@ export function ProductsPage() {
               </div>
 
               <div className="flex justify-center">
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-200/50 hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-2">
                   <img
                     src="/src/assets/img/circle/icon-512.png"
                     alt="Circle App"
@@ -164,12 +164,12 @@ export function ProductsPage() {
         </section>
 
         {/* ChatGPT-Kit */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto scroll-animate">
               <div className="lg:order-2 flex justify-center">
-                <div className="bg-gray-50 rounded-2xl p-12 shadow-lg border border-gray-200">
-                  <div className="bg-black rounded-xl p-12 flex items-center justify-center">
+                <div className="bg-gray-50/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-gray-200/50 hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-2">
+                  <div className="bg-gradient-to-br from-black to-gray-800 rounded-2xl p-16 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center">
                     <Chrome className="w-32 h-32 text-white" />
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export function ProductsPage() {
                   <Button
                     size="lg"
                     asChild
-                    className="bg-black hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
+                    className="bg-black hover:bg-gray-800 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                   >
                     <a
                       href="https://chromewebstore.google.com/detail/chatgpt-kit/fodhnilpmmmojhjbcpdpkgeclcakpdia"
@@ -246,8 +246,10 @@ export function ProductsPage() {
         </section>
 
         {/* TerminalGPT */}
-        <section className="bg-gray-50 pt-16 md:pt-24 pb-8 md:pb-12">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="relative bg-gradient-to-br from-gray-50 via-gray-100/50 to-orange-50/10 pt-20 md:pt-28 pb-12 md:pb-16 overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-r from-orange-100 to-red-100 rounded-full blur-3xl opacity-15"></div>
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto scroll-animate">
               <div className="space-y-8">
                 <div className="space-y-4">
@@ -305,7 +307,7 @@ export function ProductsPage() {
                   <Button
                     size="lg"
                     asChild
-                    className="bg-black hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
+                    className="bg-black hover:bg-gray-800 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                   >
                     <a
                       href="https://github.com/adamyodinsky/TerminalGPT"
@@ -320,8 +322,8 @@ export function ProductsPage() {
               </div>
 
               <div className="flex justify-center">
-                <div className="bg-white rounded-2xl p-12 shadow-lg border border-gray-200">
-                  <div className="bg-black rounded-xl p-12 flex items-center justify-center">
+                <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-gray-200/50 hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-2">
+                  <div className="bg-gradient-to-br from-black to-gray-800 rounded-2xl p-16 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center">
                     <Terminal className="w-32 h-32 text-white" />
                   </div>
                 </div>
@@ -331,13 +333,13 @@ export function ProductsPage() {
         </section>
 
         {/* Features Section */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 Why I Built These
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
                 Each project started as a solution to a problem I personally
                 faced. I built them with real users in mind, not just as
                 portfolio pieces.
@@ -367,15 +369,17 @@ export function ProductsPage() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow"
+                  className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 p-10 text-center shadow-lg hover:shadow-2xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-3 group"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto mb-6">
-                    <feature.icon className="h-8 w-8" />
+                  <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-black to-gray-800 text-white mx-auto mb-8 shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
+                    <feature.icon className="h-10 w-10" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-4">
+                  <h3 className="text-xl font-bold text-black mb-6 group-hover:text-gray-900 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-700">{feature.description}</p>
+                  <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>

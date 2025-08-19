@@ -148,14 +148,14 @@ export function ServicesPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center space-y-8 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight">
             DevOps & Platform
             <br />
             Engineering
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
             I help startups build robust infrastructure, streamline deployments,
             and create scalable backend systems. Let's turn your ideas into
             production-ready solutions.
@@ -165,13 +165,13 @@ export function ServicesPage() {
 
       <div className="space-y-24 py-16">
         {/* Services Grid */}
-        <section className="bg-gray-50 py-16 md:py-24">
+        <section className="bg-gray-50 py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 What I Do
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
                 I specialize in the tech stack and tools that startups need to
                 move fast and scale smart
               </p>
@@ -181,7 +181,7 @@ export function ServicesPage() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 p-8 shadow-lg hover:shadow-2xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-3"
                 >
                   <div className="flex items-start space-x-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white flex-shrink-0">
@@ -216,32 +216,35 @@ export function ServicesPage() {
         </section>
 
         {/* Process Section */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 How I Work
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
                 Simple, transparent process focused on getting things done right
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-4 max-w-6xl mx-auto scroll-animate">
               {process.map((step, index) => (
-                <div key={index} className="text-center">
+                <div
+                  key={index}
+                  className="text-center p-6 rounded-2xl hover:bg-white/60 backdrop-blur-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-3 group"
+                >
                   <div className="relative">
-                    <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-xl bg-black shadow-lg text-white">
+                    <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-xl bg-black shadow-lg text-white group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
                       <step.icon className="h-10 w-10" />
                     </div>
-                    <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 text-white text-sm font-bold">
+                    <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 text-white text-sm font-bold shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
                       {index + 1}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-4">
+                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-900 transition-colors duration-300">
                     {step.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
                     {step.description}
                   </p>
                 </div>
@@ -251,7 +254,7 @@ export function ServicesPage() {
         </section>
 
         {/* Benefits */}
-        <section className="bg-gray-50 py-16 md:py-24">
+        <section className="bg-gray-50 py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -263,7 +266,7 @@ export function ServicesPage() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 p-8 text-center shadow-lg hover:shadow-2xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-3"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white mx-auto mb-6">
                     <benefit.icon className="h-8 w-8" />
@@ -281,13 +284,13 @@ export function ServicesPage() {
         </section>
 
         {/* Technologies */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 My Tech Stack
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
                 I work with modern, battle-tested technologies that startups
                 love
               </p>
@@ -320,20 +323,20 @@ export function ServicesPage() {
         </section>
 
         {/* Certifications */}
-        <section className="bg-gray-50 py-16 md:py-24">
+        <section className="bg-gray-50 py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 Certifications
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
                 Certified expertise in cloud platforms and modern programming
                 languages
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto scroll-animate">
-              <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 p-8 text-center shadow-lg hover:shadow-2xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-3">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white mx-auto mb-6">
                   <Award className="h-8 w-8" />
                 </div>
@@ -360,7 +363,7 @@ export function ServicesPage() {
                 </Button>
               </div>
 
-              <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 p-8 text-center shadow-lg hover:shadow-2xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-3">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white mx-auto mb-6">
                   <Code className="h-8 w-8" />
                 </div>
@@ -391,7 +394,7 @@ export function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 max-w-3xl mx-auto scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
