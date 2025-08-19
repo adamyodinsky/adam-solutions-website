@@ -8,7 +8,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="border-t border-gray-200 bg-white shadow-inner">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Company Info */}
@@ -20,15 +20,15 @@ export function Footer() {
                 className="h-10 w-10 rounded-lg"
               />
               <div className="flex flex-col">
-                <span className="font-bold text-xl text-black">
+                <span className="font-heading font-bold text-xl text-black">
                   Adam Solutions
                 </span>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-gray-600 font-body">
                   Software Engineer & Indie Developer
                 </span>
               </div>
             </div>
-            <p className="text-gray-700 max-w-md">
+            <p className="text-gray-700 max-w-md font-body">
               I help startups with DevOps, Platform Engineering, Backend
               development, and mobile apps. Plus I build cool digital products
               on the side.
@@ -37,7 +37,9 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-black">Quick Links</h3>
+            <h3 className="font-subheading font-semibold text-lg text-black">
+              Quick Links
+            </h3>
             <div className="space-y-2">
               <Link
                 to="/products"
@@ -68,7 +70,9 @@ export function Footer() {
 
           {/* Contact & Connect */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-black">Connect</h3>
+            <h3 className="font-subheading font-semibold text-lg text-black">
+              Connect
+            </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-black" />
@@ -87,7 +91,7 @@ export function Footer() {
                   className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
-                  <span className="text-sm">LinkedIn</span>
+                  <span className="text-sm font-body">LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/adamyodinsky"
@@ -96,10 +100,10 @@ export function Footer() {
                   className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
                 >
                   <Github className="h-4 w-4" />
-                  <span className="text-sm">GitHub</span>
+                  <span className="text-sm font-body">GitHub</span>
                 </a>
               </div>
-              <div className="text-sm text-gray-600 space-y-1">
+              <div className="text-sm text-gray-600 space-y-1 font-body">
                 <p>Usually reply within 24 hours</p>
               </div>
             </div>
@@ -108,23 +112,11 @@ export function Footer() {
 
         {/* Bottom section */}
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          <div className="text-sm text-gray-600 text-center md:text-left">
+          <div className="text-sm text-gray-600 text-center md:text-left font-body">
             © 2024 Adam DevOps Solutions Ltd. All rights reserved.
           </div>
 
           <div className="flex items-center space-x-6">
-            <Link
-              to="/policies"
-              className="text-sm text-gray-600 hover:text-black transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/policies"
-              className="text-sm text-gray-600 hover:text-black transition-colors"
-            >
-              Terms of Service
-            </Link>
             <Button
               variant="outline"
               size="icon"

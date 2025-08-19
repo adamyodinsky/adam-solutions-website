@@ -38,46 +38,109 @@ export function HomePage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-white py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-4xl text-center space-y-8">
-            <div className="space-y-6 animate-fade-in">
-              <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-4 sm:space-y-0 mb-8">
+      <section className="relative bg-gradient-to-br from-white via-gray-50/30 to-blue-50/20 py-20 md:py-32 lg:py-40 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-green-100 to-blue-100 rounded-full blur-3xl opacity-15"></div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="mx-auto max-w-5xl text-center">
+            {/* Logo and Brand */}
+            <div className="animate-fade-in mb-8">
+              <div className="inline-block mb-6">
                 <img
                   src="/src/assets/img/adam-solutions-logo.png"
                   alt="Adam Solutions"
-                  className="h-24 w-24 md:h-28 md:w-28 rounded-full shadow-lg"
+                  className="h-32 w-32 md:h-40 md:w-40 rounded-full shadow-2xl ring-4 ring-white/50 mx-auto hover:scale-105 transition-transform duration-300"
                 />
-                <div className="text-center sm:text-left">
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight">
-                    Adam Solutions
-                  </h1>
-                  <p className="text-lg md:text-xl text-gray-700 mt-2">
+              </div>
+
+              {/* Main heading with better typography */}
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-black leading-[0.9] tracking-tight">
+                  Adam Solutions
+                </h1>
+                <div className="flex items-center justify-center space-x-3 mb-6">
+                  <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1 max-w-20"></div>
+                  <p className="text-xl md:text-2xl text-gray-600 font-subheading font-medium px-4">
                     Software Engineer & Indie Developer
                   </p>
+                  <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1 max-w-20"></div>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-              <Button
-                size="lg"
-                asChild
-                className="bg-black hover:bg-gray-800 text-white transform hover:scale-105 transition-all duration-200"
-              >
-                <Link to="/products">
-                  View Products
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                asChild
-                className="border-black text-black hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-200"
-              >
-                <Link to="/services">My Services</Link>
-              </Button>
+            {/* Value proposition */}
+            <div className="animate-slide-up mb-10">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto">
+                I build{" "}
+                <span className="font-semibold text-black">
+                  cool digital products
+                </span>{" "}
+                and help startups with
+                <span className="font-semibold text-black">
+                  {" "}
+                  DevOps, Platform Engineering & Backend
+                </span>{" "}
+                development. Let's make something awesome together.
+              </p>
+            </div>
+
+            {/* Enhanced CTA buttons */}
+            <div className="animate-slide-up">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-black hover:bg-gray-800 text-white transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl px-8 py-4 text-base"
+                >
+                  <Link to="/products">
+                    View My Projects
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  asChild
+                  className="border-2 border-black text-black hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-4 text-base"
+                >
+                  <Link to="/services">Explore Services</Link>
+                </Button>
+              </div>
+
+              {/* Quick stats or social proof */}
+              <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 font-body">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span>Available for projects</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <a
+                    href="https://www.linkedin.com/in/adam-yodinsky-890743153/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-800 transition-colors duration-200 hover:underline decoration-dotted underline-offset-4"
+                    title="View LinkedIn profile"
+                  >
+                    7+ years experience
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <a
+                    href="https://www.credly.com/badges/4e75e8e4-603e-4135-85f4-5026c630f1ed/linked_in_profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-800 transition-colors duration-200 hover:underline decoration-dotted underline-offset-4"
+                    title="View AWS certification"
+                  >
+                    AWS Certified Solutions Architect
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -99,9 +162,9 @@ export function HomePage() {
 
           <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto scroll-animate">
             {/* My Digital Projects */}
-            <div className="bg-white rounded-lg border border-gray-200 p-10 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl border border-gray-200 p-10 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300">
               <div className="space-y-6">
-                <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-black text-white mx-auto">
+                <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-black text-white mx-auto shadow-lg">
                   <Code className="h-10 w-10" />
                 </div>
                 <div className="text-center space-y-4">
@@ -138,9 +201,9 @@ export function HomePage() {
             </div>
 
             {/* DevOps & Engineering Services */}
-            <div className="bg-white rounded-lg border border-gray-200 p-10 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white rounded-xl border border-gray-200 p-10 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300">
               <div className="space-y-6">
-                <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-black text-white mx-auto">
+                <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-black text-white mx-auto shadow-lg">
                   <Server className="h-10 w-10" />
                 </div>
                 <div className="text-center space-y-4">
@@ -208,8 +271,11 @@ export function HomePage() {
                   "I understand startup pace and constraints. Built to scale, designed to iterate fast.",
               },
             ].map((feature, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto">
+              <div
+                key={index}
+                className="text-center space-y-4 p-6 rounded-xl hover:bg-white/60 transition-all duration-300 hover:shadow-md"
+              >
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white mx-auto shadow-lg">
                   <feature.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-bold text-black">

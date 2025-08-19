@@ -9,6 +9,7 @@ import {
   CheckCircle,
   ExternalLink,
   Terminal,
+  Star,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
@@ -107,19 +108,45 @@ export function ProductsPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    className="bg-black hover:bg-gray-800 text-white"
+                    asChild
+                    className="bg-black hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
                   >
-                    <Download className="mr-2 h-5 w-5" />
-                    Get the App
+                    <a
+                      href="https://apps.apple.com/us/app/circle-real-connections/id6747255364"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-5 w-5" />
+                      Download on App Store
+                    </a>
                   </Button>
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-black text-black hover:bg-black hover:text-white"
+                    asChild
+                    className="border-black text-black hover:bg-black hover:text-white shadow-md hover:shadow-lg"
                   >
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    Learn More
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.adamsolutions.circle"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-5 w-5" />
+                      Get it on Google Play
+                    </a>
                   </Button>
+                </div>
+
+                <div>
+                  <a
+                    href="https://circle.adam-solutions.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-black hover:text-gray-700 font-semibold text-base hover:underline transition-colors"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit circle.adam-solutions.io
+                  </a>
                 </div>
               </div>
 
@@ -188,19 +215,30 @@ export function ProductsPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    className="bg-black hover:bg-gray-800 text-white"
+                    asChild
+                    className="bg-black hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
                   >
-                    <Chrome className="mr-2 h-5 w-5" />
-                    Install Extension
+                    <a
+                      href="https://chromewebstore.google.com/detail/chatgpt-kit/fodhnilpmmmojhjbcpdpkgeclcakpdia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Chrome className="mr-2 h-5 w-5" />
+                      Install Extension
+                    </a>
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-black text-black hover:bg-black hover:text-white"
+                </div>
+
+                <div>
+                  <a
+                    href="https://chatgpt-kit.adam-solutions.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-black hover:text-gray-700 font-semibold text-base hover:underline transition-colors"
                   >
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    View Features
-                  </Button>
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Visit chatgpt-kit.adam-solutions.io
+                  </a>
                 </div>
               </div>
             </div>
@@ -224,9 +262,24 @@ export function ProductsPage() {
 
                   <p className="text-lg text-gray-700">
                     Terminal-based ChatGPT assistant I built in Python. Provides
-                    optimized, tailored answers for your machine's terminal. A
-                    tool I use daily for development work.
+                    optimized, tailored answers for your machine's terminal.
+                    Over 1 million downloads and 230+ GitHub stars!
                   </p>
+
+                  <div className="flex flex-wrap gap-3 mt-4 justify-start">
+                    <div className="inline-flex items-center rounded-full bg-gray-100 text-gray-800 px-4 py-2 text-sm font-semibold hover:bg-gray-200 hover:scale-105 transition-all duration-200 cursor-default">
+                      <Download className="mr-2 h-4 w-4" />
+                      1M+ Downloads
+                    </div>
+                    <div className="inline-flex items-center rounded-full bg-gray-100 text-gray-800 px-4 py-2 text-sm font-semibold hover:bg-gray-200 hover:scale-105 transition-all duration-200 cursor-default">
+                      <Star className="mr-2 h-4 w-4" />
+                      230+ Stars
+                    </div>
+                    <div className="inline-flex items-center rounded-full bg-gray-100 text-gray-800 px-4 py-2 text-sm font-semibold hover:bg-gray-200 hover:scale-105 transition-all duration-200 cursor-default">
+                      <Terminal className="mr-2 h-4 w-4" />
+                      Open Source
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
@@ -248,11 +301,11 @@ export function ProductsPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
                     asChild
-                    className="bg-black hover:bg-gray-800 text-white"
+                    className="bg-black hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
                   >
                     <a
                       href="https://github.com/adamyodinsky/TerminalGPT"

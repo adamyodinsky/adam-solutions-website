@@ -9,7 +9,6 @@ import {
   Users,
   CheckCircle,
   ArrowRight,
-  Play,
   ExternalLink,
   Target,
   Clock,
@@ -182,10 +181,10 @@ export function ServicesPage() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-start space-x-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white flex-shrink-0">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white flex-shrink-0">
                       <service.icon className="h-8 w-8" />
                     </div>
                     <div className="flex-1 space-y-4">
@@ -232,7 +231,7 @@ export function ServicesPage() {
               {process.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="relative">
-                    <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-lg bg-black text-white">
+                    <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-xl bg-black shadow-lg text-white">
                       <step.icon className="h-10 w-10" />
                     </div>
                     <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 text-white text-sm font-bold">
@@ -264,9 +263,9 @@ export function ServicesPage() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white mx-auto mb-6">
                     <benefit.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-bold text-black mb-4">
@@ -311,7 +310,7 @@ export function ServicesPage() {
               ].map((tech, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center rounded-lg border border-gray-200 bg-white p-6 text-sm font-medium hover:shadow-lg hover:bg-gray-50 transition-all"
+                  className="flex items-center justify-center rounded-xl border border-gray-200 bg-white p-6 text-sm font-medium hover:shadow-lg hover:bg-gray-50 transition-all"
                 >
                   {tech}
                 </div>
@@ -334,8 +333,8 @@ export function ServicesPage() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto scroll-animate">
-              <div className="bg-white rounded-lg border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto mb-6">
+              <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white mx-auto mb-6">
                   <Award className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-bold text-black mb-4">
@@ -361,8 +360,8 @@ export function ServicesPage() {
                 </Button>
               </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto mb-6">
+              <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black shadow-lg text-white mx-auto mb-6">
                   <Code className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-bold text-black mb-4">

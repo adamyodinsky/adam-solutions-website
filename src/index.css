@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -64,6 +65,50 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Quicksand "big brother" for main title - same font, just heavier */
+  h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.005em;
+    text-shadow: 0.3px 0.3px 0px rgba(0,0,0,0.1);
+  }
+  
+  /* Quicksand for subtitles and section headings */
+  h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.005em;
+  }
+  
+  /* Inter for smaller headings and UI elements */
+  h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* Custom font utility classes */
+@layer utilities {
+  .font-heading {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .font-subheading {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Navigation and UI elements use Inter for modern clarity */
+  .font-nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -134,4 +179,33 @@
 .scroll-animate.animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Enhanced shadows and gradients for subtle shading */
+.shadow-soft {
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-glow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 2px 9px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Subtle background gradients */
+.bg-gradient-subtle {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+}
+
+.bg-gradient-gray-subtle {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+/* Enhanced button shadows */
+.btn-shadow {
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-shadow:hover {
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }

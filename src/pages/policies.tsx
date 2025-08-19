@@ -86,7 +86,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="bg-white rounded-2xl p-12 border border-gray-200 max-w-4xl mx-auto scroll-animate">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg mb-4">
                   <FileText className="h-8 w-8" />
                 </div>
                 <h2 className="text-2xl font-bold text-black">
@@ -98,10 +98,10 @@ export function PoliciesPage() {
                   <a
                     key={policy.id}
                     href={`#${policy.id}`}
-                    className="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-lg hover:bg-gray-100 transition-all"
+                    className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg hover:bg-gray-100 transition-all"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-black text-white flex-shrink-0">
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black text-white shadow-lg flex-shrink-0">
                         <policy.icon className="h-6 w-6" />
                       </div>
                       <div>
@@ -125,7 +125,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
                   <RefreshCw className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -177,7 +177,7 @@ export function PoliciesPage() {
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-lg p-6 border-l-4 border-black">
+                  <div className="bg-white rounded-xl p-6 border-l-4 border-black">
                     <p className="font-semibold text-black mb-2">
                       Let's Talk First
                     </p>
@@ -198,7 +198,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
                   <Clock className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -269,7 +269,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
                   <FileText className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -319,7 +319,7 @@ export function PoliciesPage() {
                 ))}
 
                 <div className="grid gap-6 md:grid-cols-2">
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
+                  <div className="bg-white rounded-xl p-6 border border-gray-200">
                     <h4 className="font-semibold text-black mb-3">
                       Service Availability
                     </h4>
@@ -329,7 +329,7 @@ export function PoliciesPage() {
                       when I can.
                     </p>
                   </div>
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
+                  <div className="bg-white rounded-xl p-6 border border-gray-200">
                     <h4 className="font-semibold text-black mb-3">
                       Privacy & Data
                     </h4>
@@ -340,7 +340,7 @@ export function PoliciesPage() {
                   </div>
                 </div>
 
-                <div className="bg-yellow-50 rounded-lg p-6 border border-yellow-200">
+                <div className="bg-yellow-50 rounded-xl p-6 border border-yellow-200">
                   <h4 className="font-semibold text-black mb-3">
                     Liability Disclaimers
                   </h4>
@@ -361,7 +361,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white shadow-lg">
                   <Globe className="h-8 w-8" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black">
@@ -395,7 +395,7 @@ export function PoliciesPage() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="bg-gray-50 rounded-lg p-6 border border-gray-200"
+                      className="bg-gray-50 rounded-xl p-6 border border-gray-200"
                     >
                       <h4 className="font-semibold text-black mb-3">
                         {item.title}
@@ -407,7 +407,7 @@ export function PoliciesPage() {
                   ))}
                 </div>
 
-                <div className="bg-black text-white rounded-lg p-6">
+                <div className="bg-black text-white shadow-lg rounded-xl p-6">
                   <h4 className="font-semibold mb-3">Contact Information</h4>
                   <div className="text-sm leading-relaxed space-y-1">
                     <p>
@@ -426,7 +426,7 @@ export function PoliciesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="bg-gray-50 rounded-2xl p-12 border border-gray-200 text-center max-w-4xl mx-auto scroll-animate">
               <div className="space-y-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black text-white mx-auto">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black text-white shadow-lg mx-auto">
                   <User className="h-10 w-10" />
                 </div>
                 <div className="space-y-2">
