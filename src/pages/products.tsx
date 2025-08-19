@@ -11,7 +11,7 @@ import {
   Terminal,
   Star,
 } from "lucide-react";
-import circleIcon from "@/assets/img/circle/icon-512.png";
+
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 
@@ -154,7 +154,7 @@ export function ProductsPage() {
               <div className="flex justify-center">
                 <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-200/50 hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-2">
                   <img
-                    src={circleIcon}
+                    src="/icon-512.png"
                     alt="Circle App"
                     className="w-full max-w-64 mx-auto rounded-xl"
                   />
