@@ -26,7 +26,7 @@ Here’s a refined specification you can pass to your web manager:
 
 ### 4. Contact / Support
 
-- A visible **contact email** (e.g., [support@adamsolutions.com](mailto:support@adamsolutions.com)) or a working contact form.
+- A visible **contact email** (e.g., [info@adamsolutions.com](mailto:info@adamsolutions.com)) or a working contact form.
 - Optional: social media links or messaging support if preferred.
 
 ### 5. Policies
