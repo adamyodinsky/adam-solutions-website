@@ -1,5 +1,6 @@
 {
   "name": "adam-solutions-website",
+  "homepage": "https://adam-solutions.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
