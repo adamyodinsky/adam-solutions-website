@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, ArrowUp, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/img/adam-solutions-logo.png";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -15,7 +16,7 @@ export function Footer() {
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="/src/assets/img/adam-solutions-logo.png"
+                src={logoImage}
                 alt="Adam Solutions"
                 className="h-10 w-10 rounded-lg"
               />

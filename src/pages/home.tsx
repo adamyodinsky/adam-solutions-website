@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Server, Zap, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import logoImage from "@/assets/img/adam-solutions-logo.png";
 
 export function HomePage() {
   useEffect(() => {
@@ -50,7 +51,7 @@ export function HomePage() {
             <div className="animate-fade-in mb-8">
               <div className="inline-block mb-6">
                 <img
-                  src="/src/assets/img/adam-solutions-logo.png"
+                  src={logoImage}
                   alt="Adam Solutions"
                   className="h-32 w-32 md:h-40 md:w-40 rounded-full shadow-2xl ring-4 ring-white/50 mx-auto hover:scale-105 transition-transform duration-300"
                 />

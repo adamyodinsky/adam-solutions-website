@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@/assets/img/adam-solutions-logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,7 +24,7 @@ export function Header() {
           <div className="flex items-center space-x-8">
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/src/assets/img/adam-solutions-logo.png"
+                src={logoImage}
                 alt="Adam Solutions"
                 className="h-10 w-10 rounded-lg"
               />
