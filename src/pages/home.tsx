@@ -11,19 +11,38 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 export function HomePage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const elements = document.querySelectorAll(".scroll-animate");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Helmet>
-        <title>Adam Solutions - Software Engineering & Digital products</title>
+        <title>Adam Solutions - Software Engineer & Indie Developer</title>
         <meta
           name="description"
-          content="Professional Software Engineering & DevOps services, digital products including Circle mobile app and ChatGPT-Kit Chrome extension."
+          content="Solo software engineer specializing in DevOps, Platform Engineering, Backend & Mobile apps. Creator of Circle app and ChatGPT-Kit extension."
         />
         <meta
           name="keywords"
-          content="DevOps, mobile app, Chrome extension, software engineering, digital products"
+          content="DevOps, Platform Engineering, Backend, mobile app, Chrome extension, software engineer, indie developer"
         />
       </Helmet>
 
@@ -31,21 +50,29 @@ export function HomePage() {
       <section className="bg-white py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-4xl text-center space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight">
-                Adam Solutions
-              </h1>
-
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-                Software Engineering & Digital products
-              </p>
+            <div className="space-y-6 animate-fade-in">
+              <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-4 sm:space-y-0 mb-8">
+                <img
+                  src="/src/assets/img/adam-solutions-logo.png"
+                  alt="Adam Solutions"
+                  className="h-24 w-24 md:h-28 md:w-28 rounded-full shadow-lg"
+                />
+                <div className="text-center sm:text-left">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight">
+                    Adam Solutions
+                  </h1>
+                  <p className="text-lg md:text-xl text-gray-700 mt-2">
+                    Software Engineer & Indie Developer
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <Button
                 size="lg"
                 asChild
-                className="bg-black hover:bg-gray-800 text-white"
+                className="bg-black hover:bg-gray-800 text-white transform hover:scale-105 transition-all duration-200"
               >
                 <Link to="/products">
                   View Products
@@ -56,9 +83,9 @@ export function HomePage() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="border-black text-black hover:bg-black hover:text-white"
+                className="border-black text-black hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-200"
               >
-                <Link to="/services">Our Services</Link>
+                <Link to="/services">My Services</Link>
               </Button>
             </div>
           </div>
@@ -68,28 +95,28 @@ export function HomePage() {
       {/* Overview Section */}
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center space-y-8 mb-16">
+          <div className="text-center space-y-8 mb-16 scroll-animate">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
-              What We Offer
+              What I Do
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              We provide innovative digital products and professional Software
-              Engineering consulting services to help businesses scale and
-              succeed in the digital landscape.
+              I build cool digital products and help startups with DevOps,
+              Platform Engineering, Backend development, and mobile apps. Let's
+              make something awesome together.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto scroll-animate">
             {/* Circle App */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-6">
                 <Smartphone className="h-8 w-8" />
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-black">Circle</h3>
                 <p className="text-gray-700">
-                  Mobile application with innovative features and seamless user
-                  experience.
+                  My mobile app with innovative features and a seamless user
+                  experience. Built it from scratch!
                 </p>
                 <div className="space-y-2">
                   {["Cross-platform", "Real-time sync", "Secure"].map(
@@ -116,15 +143,15 @@ export function HomePage() {
             </div>
 
             {/* ChatGPT-Kit */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-6">
                 <Chrome className="h-8 w-8" />
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-black">ChatGPT-Kit</h3>
                 <p className="text-gray-700">
-                  Chrome extension that enhances your ChatGPT experience with
-                  powerful features.
+                  Chrome extension I created to supercharge your ChatGPT
+                  experience with powerful features and shortcuts.
                 </p>
                 <div className="space-y-2">
                   {["Advanced prompts", "Export tools", "Shortcuts"].map(
@@ -151,27 +178,29 @@ export function HomePage() {
             </div>
 
             {/* Software Engineering Services */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-6">
                 <Server className="h-8 w-8" />
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-black">
-                  Software Engineering & Infrastructure Consulting
+                  DevOps & Platform Engineering
                 </h3>
                 <p className="text-gray-700">
-                  Professional Software Engineering consulting and freelance
-                  software engineering services.
+                  I help startups build robust infrastructure, streamline
+                  deployments, and scale their backend systems efficiently.
                 </p>
                 <div className="space-y-2">
-                  {["CI/CD pipelines", "Cloud migration", "Expert team"].map(
-                    (feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-black" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </div>
-                    )
-                  )}
+                  {[
+                    "CI/CD pipelines",
+                    "Cloud platforms",
+                    "Backend systems",
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-black" />
+                      <span className="text-sm text-gray-600">{feature}</span>
+                    </div>
+                  ))}
                 </div>
                 <Button
                   variant="outline"
@@ -193,31 +222,31 @@ export function HomePage() {
       {/* Features Section */}
       <section className="bg-white py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center space-y-8 mb-16">
+          <div className="text-center space-y-8 mb-16 scroll-animate">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
-              Why Choose Adam Solutions?
+              Why Work With Me?
             </h2>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto scroll-animate">
             {[
               {
                 icon: Zap,
-                title: "Fast & Reliable",
+                title: "Fast & Focused",
                 description:
-                  "Quick delivery and reliable solutions for all your digital needs with proven methodologies.",
+                  "No bureaucracy, no meetings about meetings. I get stuff done quickly and efficiently.",
               },
               {
                 icon: Code,
-                title: "Expert Development",
+                title: "Modern Stack",
                 description:
-                  "Professional software engineering with modern best practices and cutting-edge technologies.",
+                  "I work with the latest technologies and best practices to build robust, maintainable solutions.",
               },
               {
                 icon: Shield,
-                title: "Secure & Scalable",
+                title: "Startup-Ready",
                 description:
-                  "Built with security and scalability in mind from day one, ensuring long-term success.",
+                  "I understand startup pace and constraints. Built to scale, designed to iterate fast.",
               },
             ].map((feature, index) => (
               <div key={index} className="text-center space-y-4">
@@ -237,13 +266,13 @@ export function HomePage() {
       {/* CTA Section */}
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center space-y-8 max-w-3xl mx-auto">
+          <div className="text-center space-y-8 max-w-3xl mx-auto scroll-animate">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
               Ready to Get Started?
             </h2>
             <p className="text-lg md:text-xl text-gray-700">
-              Contact us today to discuss your project or learn more about our
-              digital products and professional services.
+              Got a cool project in mind? Let's chat about how I can help bring
+              your ideas to life with solid engineering and smart solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -251,7 +280,7 @@ export function HomePage() {
                 asChild
                 className="bg-black hover:bg-gray-800 text-white"
               >
-                <a href="mailto:info@adamsolutions.com">Contact Us</a>
+                <a href="mailto:info@adamsolutions.com">Let's Talk</a>
               </Button>
               <Button
                 variant="outline"
@@ -259,7 +288,7 @@ export function HomePage() {
                 asChild
                 className="border-black text-black hover:bg-black hover:text-white"
               >
-                <Link to="/products">View Products</Link>
+                <Link to="/products">Check My Projects</Link>
               </Button>
             </div>
           </div>

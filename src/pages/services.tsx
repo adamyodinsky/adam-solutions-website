@@ -22,13 +22,13 @@ export function ServicesPage() {
   const services = [
     {
       icon: Server,
-      title: "DevOps Consulting",
+      title: "DevOps & Platform Engineering",
       description:
-        "Complete DevOps transformation including CI/CD pipeline setup, infrastructure automation, and deployment strategies.",
+        "I set up robust CI/CD pipelines, automate infrastructure, and create deployment strategies that actually work. No over-engineering, just solid foundations.",
       features: [
         "CI/CD Pipeline Setup",
         "Infrastructure as Code",
-        "Monitoring & Logging",
+        "Monitoring & Alerting",
         "Performance Optimization",
       ],
     },
@@ -36,36 +36,36 @@ export function ServicesPage() {
       icon: Cloud,
       title: "Cloud Infrastructure",
       description:
-        "Design and implement scalable cloud solutions on AWS, Azure, and Google Cloud Platform.",
+        "I design and build scalable cloud solutions on AWS, Azure, and GCP. Focus on cost-effective, maintainable architectures that grow with your startup.",
       features: [
-        "Cloud Migration",
-        "Auto-scaling Setup",
+        "Cloud Architecture",
+        "Auto-scaling Systems",
         "Cost Optimization",
-        "Security Best Practices",
+        "Security Implementation",
       ],
     },
     {
       icon: Code,
-      title: "Custom Software Development",
+      title: "Backend Development",
       description:
-        "Full-stack application development using modern technologies and best practices.",
+        "I build robust APIs, microservices, and backend systems using modern technologies. Clean code, solid architecture, built to scale.",
       features: [
-        "Web Applications",
-        "Mobile Apps",
-        "API Development",
+        "REST & GraphQL APIs",
+        "Microservices Architecture",
         "Database Design",
+        "Performance Optimization",
       ],
     },
     {
       icon: Database,
-      title: "Database Solutions",
+      title: "Mobile Apps",
       description:
-        "Database design, optimization, and migration services for improved performance and scalability.",
+        "I create mobile applications with great UX and solid backend integration. Cross-platform solutions that work smoothly across devices.",
       features: [
-        "Database Design",
-        "Performance Tuning",
-        "Data Migration",
-        "Backup Strategies",
+        "Cross-platform Development",
+        "Native Performance",
+        "Backend Integration",
+        "App Store Deployment",
       ],
     },
   ];
@@ -73,43 +73,43 @@ export function ServicesPage() {
   const benefits = [
     {
       icon: Zap,
-      title: "Fast Delivery",
+      title: "Startup Speed",
       description:
-        "Quick turnaround times without compromising on quality or attention to detail.",
+        "I understand startup urgency. Fast iterations, quick deployments, no red tape.",
     },
     {
       icon: Shield,
-      title: "Secure & Reliable",
+      title: "Production Ready",
       description:
-        "Security-first approach with robust and reliable solutions built to last.",
+        "Code that works in production, not just on demo day. Built for real users and real scale.",
     },
     {
       icon: Users,
-      title: "Expert Team",
+      title: "Direct Communication",
       description:
-        "Experienced professionals with proven track records in enterprise environments.",
+        "You work directly with me - no project managers, no miscommunication, just results.",
     },
   ];
 
   const process = [
     {
       title: "Discovery",
-      description: "Understanding your needs and requirements",
+      description: "We chat about your goals and technical challenges",
       icon: Target,
     },
     {
       title: "Planning",
-      description: "Creating a detailed project roadmap",
+      description: "I create a clear roadmap with realistic timelines",
       icon: Clock,
     },
     {
-      title: "Implementation",
-      description: "Executing the solution with precision",
+      title: "Building",
+      description: "I build, test, and iterate based on your feedback",
       icon: Code,
     },
     {
-      title: "Support",
-      description: "Ongoing maintenance and optimization",
+      title: "Launch & Support",
+      description: "Deploy to production and provide ongoing support",
       icon: Award,
     },
   ];
@@ -118,15 +118,15 @@ export function ServicesPage() {
     <>
       <Helmet>
         <title>
-          DevOps Consulting & Software Engineering Services | Adam Solutions
+          DevOps, Platform Engineering & Backend Development | Adam Solutions
         </title>
         <meta
           name="description"
-          content="Professional DevOps consulting and freelance software engineering services. Cloud infrastructure, CI/CD, custom development, and database solutions."
+          content="Solo software engineer specializing in DevOps, Platform Engineering, Backend development, and mobile apps. I help startups build and scale their tech infrastructure."
         />
         <meta
           name="keywords"
-          content="DevOps consulting, software engineering, cloud infrastructure, CI/CD, freelance developer"
+          content="DevOps, Platform Engineering, Backend development, mobile apps, startup consulting, freelance developer"
         />
       </Helmet>
 
@@ -135,13 +135,14 @@ export function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-4xl text-center space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight">
-              Expert DevOps
-              <br />& Development
+              DevOps & Platform
+              <br />
+              Engineering
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-              Professional DevOps consulting and freelance software engineering
-              services to help your business scale efficiently and securely.
-              These are professional services, not physical goods.
+              I help startups build robust infrastructure, streamline
+              deployments, and create scalable backend systems. Let's turn your
+              ideas into production-ready solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,14 +151,14 @@ export function ServicesPage() {
                 className="bg-black hover:bg-gray-800 text-white"
               >
                 <Play className="mr-2 h-5 w-5" />
-                Schedule Consultation
+                Let's Build Something
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-black text-black hover:bg-black hover:text-white"
               >
-                View Case Studies
+                See My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -171,10 +172,11 @@ export function ServicesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
-                Our Services
+                What I Do
               </h2>
               <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-                Comprehensive solutions tailored to your business needs
+                I specialize in the tech stack and tools that startups need to
+                move fast and scale smart
               </p>
             </div>
 
@@ -221,10 +223,10 @@ export function ServicesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
-                Our Process
+                How I Work
               </h2>
               <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-                A structured approach to deliver exceptional results
+                Simple, transparent process focused on getting things done right
               </p>
             </div>
 
@@ -256,7 +258,7 @@ export function ServicesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
-                Why Work With Us?
+                Why Work With Me?
               </h2>
             </div>
 
@@ -286,10 +288,11 @@ export function ServicesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
-                Technologies We Use
+                My Tech Stack
               </h2>
               <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-                Modern tools and technologies for optimal results
+                I work with modern, battle-tested technologies that startups
+                love
               </p>
             </div>
 
@@ -328,19 +331,20 @@ export function ServicesPage() {
                   <Server className="h-10 w-10" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">
-                  Professional Services
+                  Remote-First Approach
                 </h3>
                 <p className="text-gray-700 max-w-2xl mx-auto">
-                  All our offerings are professional consulting and development
-                  services. These are not physical products but expertise-based
-                  solutions delivered remotely or on-site as needed.
+                  I work remotely with startups worldwide. All services are
+                  delivered digitally with clear communication and regular
+                  updates. No physical products, just solid engineering
+                  solutions.
                 </p>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-black text-black hover:bg-black hover:text-white"
                 >
-                  Learn About Our Approach
+                  Learn About My Process
                 </Button>
               </div>
             </div>
@@ -352,11 +356,11 @@ export function ServicesPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
-                Ready to Start Your Project?
+                Ready to Build Something Cool?
               </h2>
               <p className="text-lg md:text-xl text-gray-700">
-                Let's discuss how we can help transform your business with our
-                expertise.
+                Got a startup idea that needs solid engineering? Let's chat
+                about how I can help make it happen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -365,7 +369,7 @@ export function ServicesPage() {
                   className="bg-black hover:bg-gray-800 text-white"
                 >
                   <a href="mailto:info@adamsolutions.com">
-                    Get Started
+                    Let's Talk
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
@@ -377,7 +381,7 @@ export function ServicesPage() {
                 >
                   <Link to="/products">
                     <ExternalLink className="mr-2 h-5 w-5" />
-                    View Products
+                    Check My Projects
                   </Link>
                 </Button>
               </div>

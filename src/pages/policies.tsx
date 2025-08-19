@@ -39,7 +39,7 @@ export function PoliciesPage() {
         <title>Policies - Terms, Refunds & Legal | Adam Solutions</title>
         <meta
           name="description"
-          content="Read our comprehensive policies including refund policy, cancellation terms, terms & conditions, and legal information for Adam DevOps Solutions Ltd."
+          content="Simple, straightforward policies for my services and digital products. Clear terms without the legal jargon."
         />
         <meta
           name="keywords"
@@ -55,9 +55,8 @@ export function PoliciesPage() {
               Our Policies
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-              Our comprehensive policies covering refunds, cancellations, terms
-              of service, and legal information to ensure transparency and
-              trust.
+              Straightforward policies for working with me. No legal
+              mumbo-jumbo, just clear terms that make sense for both of us.
             </p>
           </div>
         </div>
@@ -121,23 +120,22 @@ export function PoliciesPage() {
                   <AlertTriangle className="h-6 w-6 text-gray-800 flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-lg font-semibold text-black mb-2">
-                      All sales are final for digital products.
+                      Digital products are generally final sale.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                      Due to the nature of digital products and services, we
-                      generally do not offer refunds once access has been
-                      granted or services have been delivered.
+                      Since my digital products can be accessed immediately, I
+                      generally don't offer refunds. But if something's
+                      genuinely broken, let's talk about it.
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-                    However, we understand that technical issues may occur. If
-                    you experience technical issues with our digital products,
-                    please contact us within{" "}
-                    <strong className="text-black">14 days</strong> of purchase
-                    for support and potential exceptions to this policy.
+                    If you run into technical issues with my products, just
+                    email me within{" "}
+                    <strong className="text-black">14 days</strong> and I'll
+                    help fix it or work something out.
                   </p>
 
                   <div className="space-y-4">
@@ -163,13 +161,12 @@ export function PoliciesPage() {
 
                   <div className="bg-white rounded-lg p-6 border-l-4 border-black">
                     <p className="font-semibold text-black mb-2">
-                      Dispute Resolution
+                      Let's Talk First
                     </p>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      For any disputes, please contact us directly at
-                      info@adamsolutions.com before initiating chargebacks or
-                      payment disputes. We are committed to resolving issues
-                      fairly and promptly.
+                      If there's an issue, please email me at
+                      info@adamsolutions.com before doing chargebacks. I'm
+                      reasonable and prefer to work things out directly.
                     </p>
                   </div>
                 </div>
@@ -193,10 +190,9 @@ export function PoliciesPage() {
 
               <div className="bg-white rounded-2xl p-8 border border-gray-200 space-y-6">
                 <p className="text-gray-700 leading-relaxed">
-                  This policy applies specifically to subscription-based
-                  products such as our{" "}
+                  This applies to subscription products like my{" "}
                   <strong className="text-black">ChatGPT-Kit</strong> Chrome
-                  extension and any other recurring services.
+                  extension or any recurring services I might offer.
                 </p>
 
                 <div className="grid gap-8 md:grid-cols-2">
@@ -226,15 +222,14 @@ export function PoliciesPage() {
                       Service Cancellations:
                     </h3>
                     <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                      For consulting and custom development services,
-                      cancellation terms are defined in individual service
-                      agreements. Generally:
+                      For consulting and development work, we'll agree on
+                      cancellation terms upfront. Generally:
                     </p>
                     <div className="space-y-3">
                       {[
-                        "Work completed up to the cancellation date will be billed",
-                        "Reasonable notice (typically 48-72 hours) is required for cancellation",
-                        "Deliverables completed will be provided regardless of project cancellation",
+                        "You pay for work I've already completed",
+                        "Give me 48-72 hours notice if you need to cancel",
+                        "You keep whatever I've built, even if the project gets cancelled",
                       ].map((item, index) => (
                         <div key={index} className="flex items-start space-x-3">
                           <CheckCircle className="h-5 w-5 text-black flex-shrink-0 mt-0.5" />
@@ -269,19 +264,19 @@ export function PoliciesPage() {
                   {
                     title: "License & Usage Rights",
                     items: [
-                      "Digital products are licensed, not sold, for personal or business use as specified",
-                      "Redistribution, resale, or sharing of digital products is prohibited",
-                      "Reverse engineering, decompilation, or modification of products is not permitted",
-                      "License is non-transferable and terminates upon violation of terms",
+                      "You can use my products for personal or business use",
+                      "Please don't redistribute, resell, or share them",
+                      "Don't try to reverse engineer or modify the products",
+                      "These licenses are just for you, not transferable",
                     ],
                   },
                   {
                     title: "Prohibited Behaviors",
                     items: [
-                      "Using products for illegal or unauthorized purposes",
-                      "Attempting to gain unauthorized access to our systems or other users' data",
-                      "Interfering with the proper functioning of our products or services",
-                      "Violating intellectual property rights or applicable laws",
+                      "Don't use my products for anything illegal",
+                      "Don't try to hack my systems or other users' data",
+                      "Don't mess with how my products work",
+                      "Respect intellectual property and follow the law",
                     ],
                   },
                 ].map((section, index) => (
@@ -311,9 +306,9 @@ export function PoliciesPage() {
                       Service Availability
                     </h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      While we strive for maximum uptime, we cannot guarantee
-                      uninterrupted service availability. Scheduled maintenance
-                      will be communicated in advance when possible.
+                      I try to keep everything running smoothly, but sometimes
+                      things break. I'll let you know about planned maintenance
+                      when I can.
                     </p>
                   </div>
                   <div className="bg-white rounded-lg p-6 border border-gray-200">
@@ -321,10 +316,8 @@ export function PoliciesPage() {
                       Privacy & Data
                     </h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      We respect your privacy and handle personal data in
-                      accordance with applicable privacy laws. We collect only
-                      necessary information and do not sell personal data to
-                      third parties.
+                      I respect your privacy and follow privacy laws. I only
+                      collect what I need and never sell your data to anyone.
                     </p>
                   </div>
                 </div>
@@ -334,11 +327,10 @@ export function PoliciesPage() {
                     Liability Disclaimers
                   </h4>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Our products and services are provided "as is" without
-                    warranties of any kind. We are not liable for any indirect,
-                    incidental, or consequential damages arising from the use of
-                    our products or services. Our total liability is limited to
-                    the amount paid for the specific product or service.
+                    My products are provided "as is" - I can't guarantee
+                    everything will be perfect. If something goes wrong, my
+                    liability is limited to what you actually paid me. This is
+                    pretty standard stuff.
                   </p>
                 </div>
               </div>
@@ -365,22 +357,22 @@ export function PoliciesPage() {
                     {
                       title: "Global Availability",
                       content:
-                        "Our products are delivered digitally and are available globally. However, availability may be restricted in certain jurisdictions due to local laws or regulations.",
+                        "My products are delivered digitally and available worldwide. Some regions might have restrictions due to local laws.",
                     },
                     {
                       title: "Export Compliance",
                       content:
-                        "We comply with applicable export control laws and regulations. Our digital products and technical data may be subject to export controls. By purchasing and using our products, you agree to comply with all applicable export laws.",
+                        "I follow export control laws. My digital products might be subject to export controls, so you need to follow applicable laws too.",
                     },
                     {
                       title: "Regional Restrictions",
                       content:
-                        "If you experience purchase issues due to regional restrictions or payment processing limitations, please contact us at info@adamsolutions.com. We will work to find alternative solutions where legally permissible.",
+                        "Having trouble with regional restrictions or payments? Email me at info@adamsolutions.com and I'll see what I can do.",
                     },
                     {
                       title: "Governing Law",
                       content:
-                        "These terms are governed by the laws of the United Kingdom. Any disputes will be resolved through binding arbitration or in the courts of the United Kingdom.",
+                        "These terms follow UK law. If we have disputes, we'll handle them in UK courts or arbitration.",
                     },
                   ].map((item, index) => (
                     <div
@@ -404,7 +396,6 @@ export function PoliciesPage() {
                       <strong>Adam DevOps Solutions Ltd</strong>
                     </p>
                     <p>Email: info@adamsolutions.com</p>
-                    <p>For legal matters: legal@adamsolutions.com</p>
                   </div>
                 </div>
               </div>
@@ -425,9 +416,9 @@ export function PoliciesPage() {
                     Last Updated: {new Date().toLocaleDateString()}
                   </p>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    We reserve the right to update these policies at any time.
-                    Material changes will be communicated to existing customers
-                    via email and prominently displayed on our website.
+                    I might update these policies sometimes. If I make big
+                    changes, I'll email existing customers and put a notice on
+                    the website.
                   </p>
                 </div>
               </div>

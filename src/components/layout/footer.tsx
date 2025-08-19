@@ -24,14 +24,14 @@ export function Footer() {
                   Adam Solutions
                 </span>
                 <span className="text-sm text-gray-600">
-                  DevOps & Digital Products
+                  Software Engineer & Indie Developer
                 </span>
               </div>
             </div>
             <p className="text-gray-700 max-w-md">
-              Professional DevOps consulting and innovative digital products to
-              help businesses scale efficiently and securely in the modern
-              digital landscape.
+              I help startups with DevOps, Platform Engineering, Backend
+              development, and mobile apps. Plus I build cool digital products
+              on the side.
             </p>
           </div>
 
@@ -43,13 +43,13 @@ export function Footer() {
                 to="/products"
                 className="block text-gray-600 hover:text-black transition-colors"
               >
-                Digital Products
+                My Projects
               </Link>
               <Link
                 to="/services"
                 className="block text-gray-600 hover:text-black transition-colors"
               >
-                DevOps Services
+                My Services
               </Link>
               <a
                 href="mailto:info@adamsolutions.com"
@@ -80,8 +80,8 @@ export function Footer() {
                 </a>
               </div>
               <div className="text-sm text-gray-600 space-y-1">
-                <p>Response time: 24-48 hours</p>
-                <p>Business hours: Mon-Fri 9AM-6PM UTC</p>
+                <p>Usually reply within 24 hours</p>
+                <p>Available: Mon-Fri 9AM-6PM UTC</p>
               </div>
             </div>
           </div>

@@ -16,16 +16,14 @@ export function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title>
-          Digital Products - Circle App & ChatGPT-Kit | Adam Solutions
-        </title>
+        <title>My Projects - Circle App & ChatGPT-Kit | Adam Solutions</title>
         <meta
           name="description"
-          content="Discover our innovative digital products: Circle mobile app and ChatGPT-Kit Chrome extension. No physical fulfillment - purely digital solutions."
+          content="Check out my personal projects: Circle mobile app and ChatGPT-Kit Chrome extension. Digital products I built from scratch."
         />
         <meta
           name="keywords"
-          content="Circle app, ChatGPT-Kit, Chrome extension, mobile app, digital products"
+          content="Circle app, ChatGPT-Kit, Chrome extension, mobile app, indie developer projects"
         />
       </Helmet>
 
@@ -34,12 +32,12 @@ export function ProductsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-4xl text-center space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold text-black">
-              Our Digital Products
+              My Projects
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-              Innovative digital solutions designed to enhance your productivity
-              and experience. All products are delivered digitally with no
-              physical fulfillment required.
+              Here are some digital products I've built in my spare time. Both
+              are live, have real users, and showcase different aspects of what
+              I can create.
             </p>
           </div>
         </div>
@@ -63,10 +61,9 @@ export function ProductsPage() {
                   </h2>
 
                   <p className="text-lg text-gray-700">
-                    A powerful mobile application that delivers exceptional user
-                    experience with innovative features. Circle is designed to
-                    streamline your mobile workflow and provide seamless
-                    functionality across devices.
+                    A mobile app I built to solve a problem I had. It features
+                    cross-platform compatibility, real-time sync, and a clean
+                    interface. Still actively maintained with regular updates.
                   </p>
                 </div>
 
@@ -95,7 +92,7 @@ export function ProductsPage() {
                     className="bg-black hover:bg-gray-800 text-white"
                   >
                     <Download className="mr-2 h-5 w-5" />
-                    Download Now
+                    Get the App
                   </Button>
                   <Button
                     variant="outline"
@@ -158,10 +155,9 @@ export function ProductsPage() {
                   </h2>
 
                   <p className="text-lg text-gray-700">
-                    Enhance your ChatGPT experience with our powerful Chrome
-                    extension. ChatGPT-Kit provides advanced features, improved
-                    workflow, and seamless integration to boost your AI
-                    productivity.
+                    Chrome extension I created to make ChatGPT more productive.
+                    Adds advanced prompts, export tools, and keyboard shortcuts.
+                    Over 25k users and growing!
                   </p>
                 </div>
 
@@ -190,7 +186,7 @@ export function ProductsPage() {
                     className="bg-black hover:bg-gray-800 text-white"
                   >
                     <Chrome className="mr-2 h-5 w-5" />
-                    Add to Chrome
+                    Install Extension
                   </Button>
                   <Button
                     variant="outline"
@@ -224,11 +220,12 @@ export function ProductsPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
-                Why Choose Our Products?
+                Why I Built These
               </h2>
               <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-                All our digital products are built with quality, performance,
-                and user experience in mind.
+                Each project started as a solution to a problem I personally
+                faced. I built them with real users in mind, not just as
+                portfolio pieces.
               </p>
             </div>
 
@@ -236,21 +233,21 @@ export function ProductsPage() {
               {[
                 {
                   icon: Zap,
-                  title: "Instant Access",
+                  title: "Real-World Tested",
                   description:
-                    "Digital delivery means instant access to your purchased products with no waiting time.",
+                    "Both apps are used by thousands of real users daily. They solve actual problems, not imaginary ones.",
                 },
                 {
                   icon: Users,
-                  title: "Active Community",
+                  title: "User-Driven",
                   description:
-                    "Join thousands of users who love our products and provide valuable feedback.",
+                    "I listen to user feedback and iterate quickly. These aren't abandoned side projects.",
                 },
                 {
                   icon: Shield,
-                  title: "Regular Updates",
+                  title: "Built to Last",
                   description:
-                    "Continuous improvements and new features based on user feedback and market trends.",
+                    "Solid architecture, proper testing, and maintainable code. I build things I'm proud to put my name on.",
                 },
               ].map((feature, index) => (
                 <div
