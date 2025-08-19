@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -66,10 +66,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact & Connect */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-black">Contact</h3>
-            <div className="space-y-2">
+            <h3 className="font-semibold text-lg text-black">Connect</h3>
+            <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-black" />
                 <a
@@ -79,9 +79,28 @@ export function Footer() {
                   info@adamsolutions.com
                 </a>
               </div>
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/adam-yodinsky-890743153/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  <span className="text-sm">LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/adamyodinsky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
+                >
+                  <Github className="h-4 w-4" />
+                  <span className="text-sm">GitHub</span>
+                </a>
+              </div>
               <div className="text-sm text-gray-600 space-y-1">
                 <p>Usually reply within 24 hours</p>
-                <p>Available: Mon-Fri 9AM-6PM UTC</p>
               </div>
             </div>
           </div>

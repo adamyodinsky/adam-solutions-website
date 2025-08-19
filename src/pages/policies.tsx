@@ -8,8 +8,26 @@ import {
   AlertTriangle,
   User,
 } from "lucide-react";
+import { useEffect } from "react";
 
 export function PoliciesPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const elements = document.querySelectorAll(".scroll-animate");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   const policies = [
     {
       id: "refund-policy",
@@ -50,7 +68,7 @@ export function PoliciesPage() {
       {/* Hero Section */}
       <section className="bg-white py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-4xl text-center space-y-8">
+          <div className="mx-auto max-w-4xl text-center space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-black">
               Our Policies
             </h1>
@@ -66,7 +84,7 @@ export function PoliciesPage() {
         {/* Table of Contents */}
         <section className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="bg-white rounded-2xl p-12 border border-gray-200 max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl p-12 border border-gray-200 max-w-4xl mx-auto scroll-animate">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-4">
                   <FileText className="h-8 w-8" />
@@ -105,7 +123,7 @@ export function PoliciesPage() {
         {/* Refund & Dispute Policy */}
         <section id="refund-policy" className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
                   <RefreshCw className="h-8 w-8" />
@@ -178,7 +196,7 @@ export function PoliciesPage() {
         {/* Cancellation Policy */}
         <section id="cancellation-policy" className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
                   <Clock className="h-8 w-8" />
@@ -249,7 +267,7 @@ export function PoliciesPage() {
         {/* Terms & Conditions */}
         <section id="terms-conditions" className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
                   <FileText className="h-8 w-8" />
@@ -341,7 +359,7 @@ export function PoliciesPage() {
         {/* Legal & Export Restrictions */}
         <section id="legal-export" className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 scroll-animate">
               <div className="flex items-center space-x-4">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white">
                   <Globe className="h-8 w-8" />
@@ -406,7 +424,7 @@ export function PoliciesPage() {
         {/* Last Updated */}
         <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="bg-gray-50 rounded-2xl p-12 border border-gray-200 text-center max-w-4xl mx-auto">
+            <div className="bg-gray-50 rounded-2xl p-12 border border-gray-200 text-center max-w-4xl mx-auto scroll-animate">
               <div className="space-y-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black text-white mx-auto">
                   <User className="h-10 w-10" />

@@ -17,8 +17,26 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 export function ServicesPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const elements = document.querySelectorAll(".scroll-animate");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   const services = [
     {
       icon: Server,
@@ -94,22 +112,22 @@ export function ServicesPage() {
   const process = [
     {
       title: "Discovery",
-      description: "We chat about your goals and technical challenges",
+      description: "We chat about your goals and challenges",
       icon: Target,
     },
     {
       title: "Planning",
-      description: "I create a clear roadmap with realistic timelines",
+      description: "Clear roadmap with realistic timelines",
       icon: Clock,
     },
     {
       title: "Building",
-      description: "I build, test, and iterate based on your feedback",
+      description: "Build, test, and iterate based on feedback",
       icon: Code,
     },
     {
       title: "Launch & Support",
-      description: "Deploy to production and provide ongoing support",
+      description: "Deploy to production with ongoing support",
       icon: Award,
     },
   ];
@@ -132,37 +150,17 @@ export function ServicesPage() {
 
       {/* Hero Section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-4xl text-center space-y-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight">
-              DevOps & Platform
-              <br />
-              Engineering
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-              I help startups build robust infrastructure, streamline
-              deployments, and create scalable backend systems. Let's turn your
-              ideas into production-ready solutions.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-black hover:bg-gray-800 text-white"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Let's Build Something
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-black text-black hover:bg-black hover:text-white"
-              >
-                See My Work
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+        <div className="mx-auto max-w-4xl text-center space-y-8 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight">
+            DevOps & Platform
+            <br />
+            Engineering
+          </h1>
+          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+            I help startups build robust infrastructure, streamline deployments,
+            and create scalable backend systems. Let's turn your ideas into
+            production-ready solutions.
+          </p>
         </div>
       </section>
 
@@ -170,7 +168,7 @@ export function ServicesPage() {
         {/* Services Grid */}
         <section className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center space-y-8 mb-16">
+            <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 What I Do
               </h2>
@@ -180,7 +178,7 @@ export function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto scroll-animate">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -221,7 +219,7 @@ export function ServicesPage() {
         {/* Process Section */}
         <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center space-y-8 mb-16">
+            <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 How I Work
               </h2>
@@ -230,7 +228,7 @@ export function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-4 max-w-6xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-4 max-w-6xl mx-auto scroll-animate">
               {process.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="relative">
@@ -256,13 +254,13 @@ export function ServicesPage() {
         {/* Benefits */}
         <section className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center space-y-8 mb-16">
+            <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 Why Work With Me?
               </h2>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto scroll-animate">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
@@ -286,7 +284,7 @@ export function ServicesPage() {
         {/* Technologies */}
         <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center space-y-8 mb-16">
+            <div className="text-center space-y-8 mb-16 scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 My Tech Stack
               </h2>
@@ -296,7 +294,7 @@ export function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5 max-w-5xl mx-auto scroll-animate">
               {[
                 "Docker",
                 "Kubernetes",
@@ -322,29 +320,71 @@ export function ServicesPage() {
           </div>
         </section>
 
-        {/* Service Notice */}
+        {/* Certifications */}
         <section className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="bg-white rounded-2xl p-12 border border-gray-200 text-center max-w-4xl mx-auto">
-              <div className="space-y-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black text-white mx-auto">
-                  <Server className="h-10 w-10" />
+            <div className="text-center space-y-8 mb-16 scroll-animate">
+              <h2 className="text-3xl md:text-5xl font-bold text-black">
+                Certifications
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+                Certified expertise in cloud platforms and modern programming
+                languages
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto scroll-animate">
+              <div className="bg-white rounded-lg border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto mb-6">
+                  <Award className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-black">
-                  Remote-First Approach
+                <h3 className="text-xl font-bold text-black mb-4">
+                  AWS Certified Solutions Architect
                 </h3>
-                <p className="text-gray-700 max-w-2xl mx-auto">
-                  I work remotely with startups worldwide. All services are
-                  delivered digitally with clear communication and regular
-                  updates. No physical products, just solid engineering
-                  solutions.
+                <p className="text-gray-700 mb-6">
+                  Certified in designing distributed systems on AWS
                 </p>
                 <Button
-                  size="lg"
                   variant="outline"
+                  size="sm"
+                  asChild
                   className="border-black text-black hover:bg-black hover:text-white"
                 >
-                  Learn About My Process
+                  <a
+                    href="https://www.credly.com/badges/4e75e8e4-603e-4135-85f4-5026c630f1ed/linked_in_profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Certificate
+                  </a>
+                </Button>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mx-auto mb-6">
+                  <Code className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Go Programming Language
+                </h3>
+                <p className="text-gray-700 mb-6">
+                  Certified in Go programming fundamentals and best practices
+                </p>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="border-black text-black hover:bg-black hover:text-white"
+                >
+                  <a
+                    href="https://www.udemy.com/certificate/UC-18155bf0-2315-46f8-a317-b1b7d2b96394/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Certificate
+                  </a>
                 </Button>
               </div>
             </div>
@@ -354,7 +394,7 @@ export function ServicesPage() {
         {/* CTA */}
         <section className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center space-y-8 max-w-3xl mx-auto">
+            <div className="text-center space-y-8 max-w-3xl mx-auto scroll-animate">
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 Ready to Build Something Cool?
               </h2>

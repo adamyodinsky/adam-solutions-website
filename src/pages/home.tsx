@@ -1,15 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Code,
-  Smartphone,
-  Chrome,
-  Server,
-  Zap,
-  Shield,
-  CheckCircle,
-} from "lucide-react";
+import { ArrowRight, Code, Server, Zap, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 
@@ -106,113 +97,81 @@ export function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto scroll-animate">
-            {/* Circle App */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-6">
-                <Smartphone className="h-8 w-8" />
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-black">Circle</h3>
-                <p className="text-gray-700">
-                  My mobile app with innovative features and a seamless user
-                  experience. Built it from scratch!
-                </p>
-                <div className="space-y-2">
-                  {["Cross-platform", "Real-time sync", "Secure"].map(
-                    (feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-black" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </div>
-                    )
-                  )}
+          <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto scroll-animate">
+            {/* My Digital Projects */}
+            <div className="bg-white rounded-lg border border-gray-200 p-10 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
+              <div className="space-y-6">
+                <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-black text-white mx-auto">
+                  <Code className="h-10 w-10" />
                 </div>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="mt-4 border-black text-black hover:bg-black hover:text-white"
-                >
-                  <Link to="/products">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <div className="text-center space-y-4">
+                  <h3 className="text-3xl font-bold text-black">
+                    My Digital Projects
+                  </h3>
+                  <p className="text-lg text-gray-700">
+                    I build digital products and open source tools that solve
+                    real problems
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
+                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                      Circle mobile app
+                    </span>
+                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                      ChatGPT-Kit extension
+                    </span>
+                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                      TerminalGPT CLI (1M+ downloads)
+                    </span>
+                  </div>
+                  <Button
+                    size="lg"
+                    asChild
+                    className="bg-black hover:bg-gray-800 text-white mt-6"
+                  >
+                    <Link to="/products">
+                      Check My Projects
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
 
-            {/* ChatGPT-Kit */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-6">
-                <Chrome className="h-8 w-8" />
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-black">ChatGPT-Kit</h3>
-                <p className="text-gray-700">
-                  Chrome extension I created to supercharge your ChatGPT
-                  experience with powerful features and shortcuts.
-                </p>
-                <div className="space-y-2">
-                  {["Advanced prompts", "Export tools", "Shortcuts"].map(
-                    (feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-black" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </div>
-                    )
-                  )}
+            {/* DevOps & Engineering Services */}
+            <div className="bg-white rounded-lg border border-gray-200 p-10 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
+              <div className="space-y-6">
+                <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-black text-white mx-auto">
+                  <Server className="h-10 w-10" />
                 </div>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="mt-4 border-black text-black hover:bg-black hover:text-white"
-                >
-                  <Link to="/products">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* Software Engineering Services */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-black text-white mb-6">
-                <Server className="h-8 w-8" />
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-black">
-                  DevOps & Platform Engineering
-                </h3>
-                <p className="text-gray-700">
-                  I help startups build robust infrastructure, streamline
-                  deployments, and scale their backend systems efficiently.
-                </p>
-                <div className="space-y-2">
-                  {[
-                    "CI/CD pipelines",
-                    "Cloud platforms",
-                    "Backend systems",
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-black" />
-                      <span className="text-sm text-gray-600">{feature}</span>
-                    </div>
-                  ))}
+                <div className="text-center space-y-4">
+                  <h3 className="text-3xl font-bold text-black">
+                    DevOps & Engineering Services
+                  </h3>
+                  <p className="text-lg text-gray-700">
+                    I help startups build robust infrastructure and scale
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
+                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                      CI/CD Pipelines
+                    </span>
+                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                      Cloud Architecture
+                    </span>
+                    <span className="bg-gray-100 px-3 py-1 rounded-full">
+                      Backend Systems
+                    </span>
+                  </div>
+                  <Button
+                    size="lg"
+                    asChild
+                    className="bg-black hover:bg-gray-800 text-white mt-6"
+                  >
+                    <Link to="/services">
+                      View My Services
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
                 </div>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="mt-4 border-black text-black hover:bg-black hover:text-white"
-                >
-                  <Link to="/services">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
             </div>
           </div>
