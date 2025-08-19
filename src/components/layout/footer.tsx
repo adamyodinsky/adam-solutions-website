@@ -54,7 +54,7 @@ export function Footer() {
                 My Services
               </Link>
               <a
-                href="mailto:info@adamsolutions.com"
+                href="mailto:info@adam-solutions.io"
                 className="block text-gray-600 hover:text-black transition-colors"
               >
                 Get in Touch
@@ -77,10 +77,10 @@ export function Footer() {
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-black" />
                 <a
-                  href="mailto:info@adamsolutions.com"
+                  href="mailto:info@adam-solutions.io"
                   className="text-gray-600 hover:text-black transition-colors"
                 >
-                  info@adamsolutions.com
+                  info@adam-solutions.io
                 </a>
               </div>
               <div className="flex items-center space-x-4">

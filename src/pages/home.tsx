@@ -312,7 +312,7 @@ export function HomePage() {
                 asChild
                 className="bg-black hover:bg-gray-800 text-white"
               >
-                <a href="mailto:info@adamsolutions.com">Let's Talk</a>
+                <a href="mailto:info@adam-solutions.io">Let's Talk</a>
               </Button>
               <Button
                 variant="outline"

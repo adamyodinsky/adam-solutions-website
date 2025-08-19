@@ -186,7 +186,7 @@ export function PoliciesPage() {
                     </p>
                     <p className="text-gray-700 text-sm leading-relaxed">
                       If there's an issue, please email me at
-                      info@adamsolutions.com before doing chargebacks. I'm
+                      info@adam-solutions.io before doing chargebacks. I'm
                       reasonable and prefer to work things out directly.
                     </p>
                   </div>
@@ -388,7 +388,7 @@ export function PoliciesPage() {
                     {
                       title: "Regional Restrictions",
                       content:
-                        "Having trouble with regional restrictions or payments? Email me at info@adamsolutions.com and I'll see what I can do.",
+                        "Having trouble with regional restrictions or payments? Email me at info@adam-solutions.io and I'll see what I can do.",
                     },
                     {
                       title: "Governing Law",
@@ -416,7 +416,7 @@ export function PoliciesPage() {
                     <p>
                       <strong>Adam DevOps Solutions Ltd</strong>
                     </p>
-                    <p>Email: info@adamsolutions.com</p>
+                    <p>Email: info@adam-solutions.io</p>
                   </div>
                 </div>
               </div>

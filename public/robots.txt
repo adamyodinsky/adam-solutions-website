@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adamsolutions.com/sitemap.xml
+Sitemap: https://adam-solutions.io/sitemap.xml

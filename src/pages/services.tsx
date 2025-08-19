@@ -410,7 +410,7 @@ export function ServicesPage() {
                   asChild
                   className="bg-black hover:bg-gray-800 text-white"
                 >
-                  <a href="mailto:info@adamsolutions.com">
+                  <a href="mailto:info@adam-solutions.io">
                     Let's Talk
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
