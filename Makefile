@@ -1,2 +1,2 @@
 build:
-	yarn build && rm -rf docs && mv dist docs
+	yarn build
