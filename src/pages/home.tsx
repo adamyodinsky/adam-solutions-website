@@ -166,12 +166,12 @@ export function HomePage() {
 
           <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto scroll-animate">
             {/* My Digital Projects */}
-            <div className="bg-white rounded-xl border border-gray-200 p-10 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300">
-              <div className="space-y-6">
+            <div className="bg-white rounded-xl border border-gray-200 p-10 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <div className="flex-1">
                 <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-black text-white mx-auto shadow-lg">
                   <Code className="h-10 w-10" />
                 </div>
-                <div className="text-center space-y-4">
+                <div className="text-center space-y-4 mt-6">
                   <h3 className="text-3xl font-bold text-black">
                     My Digital Projects
                   </h3>
@@ -190,27 +190,29 @@ export function HomePage() {
                       TerminalGPT CLI (1M+ downloads)
                     </span>
                   </div>
-                  <Button
-                    size="lg"
-                    asChild
-                    className="bg-black hover:bg-gray-800 text-white mt-6"
-                  >
-                    <Link to="/products">
-                      Check My Projects
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
                 </div>
+              </div>
+              <div className="mt-8">
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-black hover:bg-gray-800 text-white w-full"
+                >
+                  <Link to="/products">
+                    Check My Projects
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
               </div>
             </div>
 
             {/* DevOps & Engineering Services */}
-            <div className="bg-white rounded-xl border border-gray-200 p-10 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300">
-              <div className="space-y-6">
+            <div className="bg-white rounded-xl border border-gray-200 p-10 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <div className="flex-1">
                 <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-black text-white mx-auto shadow-lg">
                   <Server className="h-10 w-10" />
                 </div>
-                <div className="text-center space-y-4">
+                <div className="text-center space-y-4 mt-6">
                   <h3 className="text-3xl font-bold text-black">
                     DevOps & Engineering Services
                   </h3>
@@ -228,17 +230,19 @@ export function HomePage() {
                       Backend Systems
                     </span>
                   </div>
-                  <Button
-                    size="lg"
-                    asChild
-                    className="bg-black hover:bg-gray-800 text-white mt-6"
-                  >
-                    <Link to="/services">
-                      View My Services
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
                 </div>
+              </div>
+              <div className="mt-8">
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-black hover:bg-gray-800 text-white w-full"
+                >
+                  <Link to="/services">
+                    View My Services
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
