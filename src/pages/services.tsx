@@ -13,10 +13,16 @@ import {
   Target,
   Clock,
   Award,
+  Star,
+  ChevronDown,
+  ChevronUp,
+  Settings,
+  Smartphone,
+  BarChart3,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function ServicesPage() {
   useEffect(() => {
@@ -132,6 +138,165 @@ export function ServicesPage() {
       icon: Award,
     },
   ];
+
+  // Hero Technologies - Most Important
+  const heroTechnologies = [
+    { name: "AWS", level: "Expert", years: "7+" },
+    { name: "Docker", level: "Expert", years: "7+" },
+    { name: "Kubernetes", level: "Expert", years: "7+" },
+    { name: "Prometheus", level: "Expert", years: "7+" },
+    { name: "Grafana", level: "Expert", years: "7+" },
+    { name: "ArgoCD", level: "Expert", years: "4+" },
+    { name: "GitHub Actions", level: "Expert", years: "4+" },
+    { name: "Node.js", level: "Expert", years: "7+" },
+    { name: "Python", level: "Expert", years: "7+" },
+    { name: "Go", level: "Proficient", years: "5+" },
+    { name: "React", level: "Expert", years: "6+" },
+    { name: "PostgreSQL", level: "Expert", years: "7+" },
+    { name: "MongoDB", level: "Proficient", years: "7+" },
+  ];
+
+  // Categorized Tech Stack
+  const techStackCategories = [
+    {
+      title: "Cloud & Infrastructure",
+      icon: Cloud,
+      isExpanded: true,
+      technologies: [
+        { name: "AWS", level: "Expert", years: "7+" },
+        { name: "Azure", level: "Proficient", years: "3+" },
+        { name: "CloudFlare", level: "Proficient", years: "3+" },
+        { name: "Google Cloud Platform", level: "Proficient", years: "3+" },
+        { name: "DigitalOcean", level: "Proficient", years: "3+" },
+        { name: "Cloudflare", level: "Proficient", years: "3+" },
+      ],
+    },
+    {
+      title: "DevOps & Platform Engineering",
+      icon: Settings,
+      isExpanded: true,
+      technologies: [
+        { name: "Docker", level: "Expert", years: "7+" },
+        { name: "Kubernetes", level: "Expert", years: "7+" },
+        { name: "Terraform", level: "Expert", years: "7+" },
+        { name: "Ansible", level: "Expert", years: "7+" },
+        { name: "Jenkins", level: "Proficient", years: "5+" },
+        { name: "GitLab CI/CD", level: "Expert", years: "5+" },
+        { name: "GitHub Actions", level: "Expert", years: "4+" },
+        { name: "ArgoCD", level: "Expert", years: "4+" },
+        { name: "Helm", level: "Expert", years: "7+" },
+        { name: "Prometheus", level: "Expert", years: "7+" },
+        { name: "Grafana", level: "Expert", years: "7+" },
+        { name: "Istio", level: "Familiar", years: "3+" },
+        { name: "Vault", level: "Familiar", years: "7+" },
+      ],
+    },
+    {
+      title: "Backend Technologies",
+      icon: Server,
+      isExpanded: true,
+      technologies: [
+        { name: "Node.js", level: "Expert", years: "7+" },
+        { name: "Python", level: "Expert", years: "7+" },
+        { name: "Go", level: "Proficient", years: "5+" },
+        { name: "Java", level: "Proficient", years: "3+" },
+        { name: "C#", level: "Proficient", years: "3+" },
+        { name: "Express.js", level: "Expert", years: "7+" },
+        { name: "FastAPI", level: "Expert", years: "3+" },
+        { name: "REST APIs", level: "Expert", years: "6+" },
+        { name: "gRPC", level: "Familiar", years: "2+" },
+        { name: "WebSockets", level: "Proficient", years: "4+" },
+        { name: "Microservices", level: "Expert", years: "7+" },
+        { name: "Event-Driven Architecture", level: "Expert", years: "5+" },
+      ],
+    },
+    {
+      title: "Databases & Storage",
+      icon: Database,
+      isExpanded: false,
+      technologies: [
+        { name: "PostgreSQL", level: "Expert", years: "7+" },
+        { name: "MongoDB", level: "Expert", years: "7+" },
+        { name: "Redis", level: "Expert", years: "4+" },
+        { name: "DynamoDB", level: "Familiar", years: "6+" },
+        { name: "Elasticsearch", level: "Proficient", years: "4+" },
+        { name: "InfluxDB", level: "Familiar", years: "1+" },
+        { name: "Cassandra", level: "Familiar", years: "2+" },
+        { name: "Amazon S3", level: "Expert", years: "7+" },
+      ],
+    },
+    {
+      title: "Frontend & Mobile",
+      icon: Smartphone,
+      isExpanded: false,
+      technologies: [
+        { name: "React", level: "Expert", years: "7+" },
+        { name: "React Native", level: "Expert", years: "3+" },
+        { name: "TypeScript", level: "Expert", years: "4+" },
+        { name: "JavaScript", level: "Expert", years: "7+" },
+        { name: "Vite", level: "Proficient", years: "3+" },
+        { name: "HTML5/CSS", level: "Proficient", years: "6+" },
+      ],
+    },
+    {
+      title: "Data & Analytics",
+      icon: BarChart3,
+      isExpanded: false,
+      technologies: [
+        { name: "Apache Kafka", level: "Proficient", years: "6+" },
+        { name: "Pandas", level: "Proficient", years: "4+" },
+        { name: "NumPy", level: "Proficient", years: "4+" },
+        { name: "Jupyter", level: "Proficient", years: "3+" },
+        { name: "TensorFlow", level: "Familiar", years: "3+" },
+        { name: "PyTorch", level: "Familiar", years: "1+" },
+      ],
+    },
+  ];
+
+  const [expandedCategories, setExpandedCategories] = useState<
+    Record<string, boolean>
+  >(
+    techStackCategories.reduce(
+      (acc, category) => ({
+        ...acc,
+        [category.title]: category.isExpanded,
+      }),
+      {} as Record<string, boolean>
+    )
+  );
+
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategories((prev) => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle],
+    }));
+  };
+
+  const getProficiencyColor = (level: string) => {
+    switch (level) {
+      case "Expert":
+        return "bg-black text-white border-black";
+      case "Proficient":
+        return "bg-gray-800 text-white border-gray-800";
+      case "Familiar":
+        return "bg-gray-600 text-white border-gray-600";
+      default:
+        return "bg-gray-500 text-white border-gray-500";
+    }
+  };
+
+  const getProficiencyIcon = (level: string) => {
+    switch (level) {
+      case "Expert":
+        return <Star className="h-3 w-3 fill-current" />;
+      case "Proficient":
+        return <Star className="h-3 w-3" />;
+      case "Familiar":
+        return null;
+      default:
+        return null;
+    }
+  };
 
   return (
     <>
@@ -295,32 +460,133 @@ export function ServicesPage() {
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
                 I work with modern, battle-tested technologies that startups
-                love
+                love. Here's what I bring to the table.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5 max-w-5xl mx-auto scroll-animate">
-              {[
-                "Docker",
-                "Kubernetes",
-                "AWS",
-                "Azure",
-                "React",
-                "Node.js",
-                "Python",
-                "Go",
-                "PostgreSQL",
-                "MongoDB",
-                "Redis",
-                "Terraform",
-              ].map((tech, index) => (
+            {/* Hero Technologies */}
+            <div className="mb-16 scroll-animate">
+              <h3 className="text-2xl md:text-3xl font-bold text-black text-center mb-8">
+                Core Expertise
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                {heroTechnologies.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="group relative bg-gradient-to-br from-black to-gray-800 rounded-2xl p-6 text-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                  >
+                    <div className="absolute top-3 right-3">
+                      <Star className="h-4 w-4 fill-current text-yellow-400" />
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-bold">{tech.name}</h4>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-gray-300">{tech.years}</span>
+                        <span className="bg-white/20 px-2 py-1 rounded-full text-xs font-medium">
+                          {tech.level}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Categorized Technologies */}
+            <div className="space-y-8 scroll-animate">
+              <h3 className="text-2xl md:text-3xl font-bold text-black text-center mb-8">
+                Complete Technology Stack
+              </h3>
+
+              {techStackCategories.map((category, categoryIndex) => (
                 <div
-                  key={index}
-                  className="flex items-center justify-center rounded-xl border border-gray-200 bg-white p-6 text-sm font-medium hover:shadow-lg hover:bg-gray-50 transition-all"
+                  key={categoryIndex}
+                  className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg"
                 >
-                  {tech}
+                  <button
+                    onClick={() => toggleCategory(category.title)}
+                    className="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-100 transition-colors duration-300"
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-black text-white">
+                        <category.icon className="h-6 w-6" />
+                      </div>
+                      <div className="text-left">
+                        <h4 className="text-xl font-bold text-black">
+                          {category.title}
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          {category.technologies.length} technologies
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-sm text-gray-500">
+                        {expandedCategories[category.title] ? "Hide" : "Show"}
+                      </span>
+                      {expandedCategories[category.title] ? (
+                        <ChevronUp className="h-5 w-5 text-gray-500" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-gray-500" />
+                      )}
+                    </div>
+                  </button>
+
+                  {expandedCategories[category.title] && (
+                    <div className="px-8 pb-8">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {category.technologies.map((tech, techIndex) => (
+                          <div
+                            key={techIndex}
+                            className={`relative flex items-center justify-between p-4 rounded-xl border-2 transition-all duration-300 hover:shadow-md hover:-translate-y-1 ${getProficiencyColor(
+                              tech.level
+                            )}`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              {getProficiencyIcon(tech.level)}
+                              <span className="font-medium">{tech.name}</span>
+                            </div>
+                            <span className="text-xs opacity-80">
+                              {tech.years}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
+
+              {/* Legend */}
+              <div className="bg-gray-50 rounded-2xl p-6 mt-8">
+                <h4 className="text-lg font-bold text-black mb-4 text-center">
+                  Proficiency Levels
+                </h4>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-black rounded border-2 border-black flex items-center justify-center">
+                      <Star className="h-2 w-2 fill-current text-white" />
+                    </div>
+                    <span className="text-sm font-medium">
+                      Expert (5+ years)
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-gray-800 rounded border-2 border-gray-800 flex items-center justify-center">
+                      <Star className="h-2 w-2 text-white" />
+                    </div>
+                    <span className="text-sm font-medium">
+                      Proficient (2-4 years)
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-gray-600 rounded border-2 border-gray-600"></div>
+                    <span className="text-sm font-medium">
+                      Familiar (1-2 years)
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
