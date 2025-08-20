@@ -199,7 +199,8 @@ export function ServicesPage() {
         { name: "Python", level: "Expert", years: "7+" },
         { name: "Go", level: "Proficient", years: "5+" },
         { name: "Java", level: "Proficient", years: "3+" },
-        { name: "C#", level: "Proficient", years: "3+" },
+        { name: "C#", level: "Proficient", years: "2+" },
+        { name: "C", level: "Proficient", years: "3+" },
         { name: "Express.js", level: "Expert", years: "7+" },
         { name: "FastAPI", level: "Expert", years: "3+" },
         { name: "REST APIs", level: "Expert", years: "6+" },
@@ -217,7 +218,7 @@ export function ServicesPage() {
         { name: "PostgreSQL", level: "Expert", years: "7+" },
         { name: "MongoDB", level: "Expert", years: "7+" },
         { name: "Redis", level: "Expert", years: "4+" },
-        { name: "DynamoDB", level: "Familiar", years: "6+" },
+        { name: "DynamoDB", level: "Proficient", years: "6+" },
         { name: "Elasticsearch", level: "Proficient", years: "4+" },
         { name: "InfluxDB", level: "Familiar", years: "1+" },
         { name: "Cassandra", level: "Familiar", years: "2+" },
@@ -245,7 +246,7 @@ export function ServicesPage() {
         { name: "Apache Kafka", level: "Proficient", years: "6+" },
         { name: "Pandas", level: "Proficient", years: "4+" },
         { name: "NumPy", level: "Proficient", years: "4+" },
-        { name: "Jupyter", level: "Proficient", years: "3+" },
+        { name: "Jupyter", level: "Familiar", years: "3+" },
         { name: "TensorFlow", level: "Familiar", years: "3+" },
         { name: "PyTorch", level: "Familiar", years: "1+" },
       ],
@@ -274,11 +275,11 @@ export function ServicesPage() {
   const getProficiencyColor = (level: string) => {
     switch (level) {
       case "Expert":
-        return "bg-black text-white border-black";
+        return "bg-gradient-to-r from-emerald-600 to-emerald-700 text-white border-emerald-600 shadow-emerald-200 shadow-md";
       case "Proficient":
-        return "bg-gray-800 text-white border-gray-800";
+        return "bg-gradient-to-r from-blue-500 to-blue-600 text-white border-blue-500 shadow-blue-200 shadow-md";
       case "Familiar":
-        return "bg-gray-600 text-white border-gray-600";
+        return "bg-gradient-to-r from-amber-400 to-amber-500 text-white border-amber-400 shadow-amber-200 shadow-md";
       default:
         return "bg-gray-500 text-white border-gray-500";
     }
@@ -287,11 +288,11 @@ export function ServicesPage() {
   const getProficiencyIcon = (level: string) => {
     switch (level) {
       case "Expert":
-        return <Star className="h-3 w-3 fill-current" />;
+        return <Star className="h-3 w-3 fill-current text-emerald-100" />;
       case "Proficient":
-        return <Star className="h-3 w-3" />;
+        return <Star className="h-3 w-3 fill-current text-blue-100" />;
       case "Familiar":
-        return null;
+        return <Star className="h-3 w-3 fill-current text-amber-100" />;
       default:
         return null;
     }
@@ -546,18 +547,40 @@ export function ServicesPage() {
 
               {/* Compact Legend */}
               <div className="bg-gray-50 rounded-xl p-4">
-                <div className="flex flex-wrap justify-center gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <Star className="h-3 w-3 fill-current text-black" />
-                    <span>Expert (5+ years)</span>
+                <div className="space-y-4">
+                  {/* Expertise Levels */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-800 mb-2 text-center">
+                      Expertise Level
+                    </h4>
+                    <div className="flex flex-wrap justify-center gap-6 text-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="px-2 py-1 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 shadow-emerald-200 shadow-sm">
+                          <Star className="h-3 w-3 fill-current text-emerald-100" />
+                        </div>
+                        <span className="font-medium">Expert</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-blue-200 shadow-sm">
+                          <Star className="h-3 w-3 fill-current text-blue-100" />
+                        </div>
+                        <span className="font-medium">Proficient</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="px-2 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 shadow-amber-200 shadow-sm">
+                          <Star className="h-3 w-3 fill-current text-amber-100" />
+                        </div>
+                        <span className="font-medium">Familiar</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Star className="h-3 w-3 text-gray-800" />
-                    <span>Proficient (2-4 years)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
-                    <span>Familiar (1-2 years)</span>
+
+                  {/* Years Explanation */}
+                  <div className="border-t border-gray-200 pt-3">
+                    <p className="text-xs text-gray-600 text-center">
+                      Numbers in parentheses indicate years of experience
+                      working with the technology
+                    </p>
                   </div>
                 </div>
               </div>
