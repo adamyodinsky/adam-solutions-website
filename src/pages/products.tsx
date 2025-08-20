@@ -173,10 +173,12 @@ export function ProductsPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 items-center max-w-6xl mx-auto scroll-animate">
               <div className="lg:order-2 flex justify-center">
-                <div className="bg-gray-50/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-gray-200/50 hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-2">
-                  <div className="bg-gradient-to-br from-black to-gray-800 rounded-2xl p-16 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                    <Chrome className="w-32 h-32 text-white" />
-                  </div>
+                <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-200/50 hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:-translate-y-2">
+                  <img
+                    src="chatgpt-kit.png"
+                    alt="ChatGPT-Kit Extension"
+                    className="w-full max-w-64 mx-auto rounded-xl"
+                  />
                 </div>
               </div>
 
