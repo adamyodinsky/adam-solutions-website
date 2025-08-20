@@ -4,6 +4,7 @@ import { Layout } from "./components/layout/layout";
 import { HomePage } from "./pages/home";
 import { ProductsPage } from "./pages/products";
 import { ServicesPage } from "./pages/services";
+import { ScrollManager } from "./components/ScrollManager";
 
 import { PoliciesPage } from "./pages/policies";
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollManager />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
