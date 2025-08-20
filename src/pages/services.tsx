@@ -41,10 +41,11 @@ export function ServicesPage() {
       icon: Server,
       title: "DevOps & Platform Engineering",
       description:
-        "I set up robust CI/CD pipelines, automate infrastructure, and create deployment strategies that actually work. No over-engineering, just solid foundations.",
+        "I set up robust CI/CD pipelines, implement GitOps workflows, automate infrastructure, and create 10x more efficient deployment strategies.",
       features: [
         "CI/CD Pipeline Setup",
         "Infrastructure as Code",
+        "GitOps Practices",
         "Monitoring & Alerting",
         "Performance Optimization",
       ],
@@ -53,7 +54,7 @@ export function ServicesPage() {
       icon: Cloud,
       title: "Cloud Infrastructure",
       description:
-        "I design and build scalable cloud solutions on AWS, Azure, and GCP. Focus on cost-effective, maintainable architectures that grow with your startup.",
+        "I design and build scalable cloud solutions on AWS, Azure, and GCP. Focus on cost-effective, secure, and maintainable architectures that grow with your startup.",
       features: [
         "Cloud Architecture",
         "Auto-scaling Systems",
@@ -67,8 +68,8 @@ export function ServicesPage() {
       description:
         "I build robust APIs, microservices, and backend systems using modern technologies. Clean code, solid architecture, built to scale.",
       features: [
-        "REST & GraphQL APIs",
         "Microservices Architecture",
+        "Event Driven Systems",
         "Database Design",
         "Performance Optimization",
       ],
@@ -83,6 +84,7 @@ export function ServicesPage() {
         "Native Performance",
         "Backend Integration",
         "App Store Deployment",
+        "Intuitive & Friendly UX",
       ],
     },
   ];
@@ -157,7 +159,8 @@ export function ServicesPage() {
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
             I help startups build robust infrastructure, streamline deployments,
-            and create scalable backend systems. Let's turn your ideas into
+            10x their dev team efficiency, create scalable secure backend
+            systems, and build cool products. Let's turn your ideas into
             production-ready solutions.
           </p>
         </div>

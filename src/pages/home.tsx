@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Server, Zap, Shield } from "lucide-react";
+import { ArrowRight, Code, Server, Zap, Shield, Users } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import logoImage from "@/assets/img/adam-solutions-logo.png";
@@ -77,12 +77,12 @@ export function HomePage() {
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto">
                 I build{" "}
                 <span className="font-semibold text-black">
-                  cool digital products
+                  digital products
                 </span>{" "}
                 and help startups with
                 <span className="font-semibold text-black">
                   {" "}
-                  DevOps, Platform Engineering & Backend
+                  DevOps, Platform Engineering, Backend & Mobile Apps
                 </span>{" "}
                 development. Let's make something awesome together.
               </p>
@@ -157,11 +157,11 @@ export function HomePage() {
             <h2 className="text-3xl md:text-5xl font-bold text-black">
               What I Do
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            {/* <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
               I build cool digital products and help startups with DevOps,
               Platform Engineering, Backend development, and mobile apps. Let's
               make something awesome together.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto scroll-animate">
@@ -260,7 +260,7 @@ export function HomePage() {
             </h2>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto scroll-animate">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto scroll-animate">
             {[
               {
                 icon: Zap,
@@ -280,10 +280,16 @@ export function HomePage() {
                 description:
                   "I understand startup pace and constraints. Built to scale, designed to iterate fast.",
               },
+              {
+                icon: Users,
+                title: "10x Dev Teams",
+                description:
+                  "I'll help your development team become 10x more efficient through automation, best practices, and streamlined workflows.",
+              },
             ].map((feature, index) => (
               <div
                 key={index}
-                className="text-center space-y-4 p-6 rounded-xl hover:bg-white/60 transition-all duration-300 hover:shadow-md"
+                className="text-center space-y-4 p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-black text-white mx-auto shadow-lg">
                   <feature.icon className="h-8 w-8" />

@@ -81,9 +81,11 @@ export function ProductsPage() {
                   </h2>
 
                   <p className="text-lg text-gray-700">
-                    A mobile app I built to solve a problem I had. It features
-                    cross-platform compatibility, real-time sync, and a clean
-                    interface. Still actively maintained with regular updates.
+                    A social mobile app I built to solve a problem I encounter
+                    as digital nomad. It features cross-platform compatibility,
+                    users profiles, real-time sync and messaging, feed,
+                    notifications center, and more. All with a clean and
+                    user-friendly interface.
                   </p>
                 </div>
 
@@ -95,8 +97,10 @@ export function ProductsPage() {
                     {[
                       "Cross-platform compatibility",
                       "Real-time synchronization",
-                      "Advanced security features",
                       "Intuitive user interface",
+                      "Notifications center",
+                      "UGC feed",
+                      "Matching algorithms",
                     ].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-black flex-shrink-0" />
@@ -188,9 +192,8 @@ export function ProductsPage() {
                   </h2>
 
                   <p className="text-lg text-gray-700">
-                    Chrome extension I created to make ChatGPT more productive.
-                    Adds advanced prompts, export tools, and keyboard shortcuts.
-                    Over 25k users and growing!
+                    An intuitive user-friendly tool Integrated with chatGPT to
+                    help you organize chats in folders.
                   </p>
                 </div>
 
@@ -200,10 +203,10 @@ export function ProductsPage() {
                   </h3>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {[
-                      "Advanced prompt templates",
-                      "Conversation management",
-                      "Export & sharing tools",
-                      "Custom shortcuts",
+                      "Drag & Drop UX",
+                      "Cloud configuration storage",
+                      "Authentication",
+                      "Paid subscription",
                     ].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-black flex-shrink-0" />
