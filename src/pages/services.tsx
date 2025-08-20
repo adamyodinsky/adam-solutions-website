@@ -165,10 +165,9 @@ export function ServicesPage() {
       technologies: [
         { name: "AWS", level: "Expert", years: "7+" },
         { name: "Azure", level: "Proficient", years: "3+" },
-        { name: "CloudFlare", level: "Proficient", years: "3+" },
         { name: "Google Cloud Platform", level: "Proficient", years: "3+" },
         { name: "DigitalOcean", level: "Proficient", years: "3+" },
-        { name: "Cloudflare", level: "Proficient", years: "3+" },
+        { name: "CloudFlare", level: "Proficient", years: "3+" },
       ],
     },
     {
@@ -213,7 +212,7 @@ export function ServicesPage() {
     {
       title: "Databases & Storage",
       icon: Database,
-      isExpanded: false,
+      isExpanded: true,
       technologies: [
         { name: "PostgreSQL", level: "Expert", years: "7+" },
         { name: "MongoDB", level: "Expert", years: "7+" },
@@ -228,7 +227,7 @@ export function ServicesPage() {
     {
       title: "Frontend & Mobile",
       icon: Smartphone,
-      isExpanded: false,
+      isExpanded: true,
       technologies: [
         { name: "React", level: "Expert", years: "7+" },
         { name: "React Native", level: "Expert", years: "3+" },
@@ -241,7 +240,7 @@ export function ServicesPage() {
     {
       title: "Data & Analytics",
       icon: BarChart3,
-      isExpanded: false,
+      isExpanded: true,
       technologies: [
         { name: "Apache Kafka", level: "Proficient", years: "6+" },
         { name: "Pandas", level: "Proficient", years: "4+" },
@@ -465,27 +464,20 @@ export function ServicesPage() {
             </div>
 
             {/* Hero Technologies */}
-            <div className="mb-16 scroll-animate">
-              <h3 className="text-2xl md:text-3xl font-bold text-black text-center mb-8">
+            <div className="mb-12 scroll-animate">
+              <h3 className="text-xl font-bold text-black text-center mb-6">
                 Core Expertise
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
                 {heroTechnologies.map((tech, index) => (
                   <div
                     key={index}
-                    className="group relative bg-gradient-to-br from-black to-gray-800 rounded-2xl p-6 text-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    className="group relative bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105"
                   >
-                    <div className="absolute top-3 right-3">
-                      <Star className="h-4 w-4 fill-current text-yellow-400" />
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-bold">{tech.name}</h4>
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-300">{tech.years}</span>
-                        <span className="bg-white/20 px-2 py-1 rounded-full text-xs font-medium">
-                          {tech.level}
-                        </span>
-                      </div>
+                    <div className="flex items-center space-x-2">
+                      <Star className="h-3 w-3 fill-current text-yellow-400" />
+                      <span>{tech.name}</span>
+                      <span className="text-xs opacity-75">({tech.years})</span>
                     </div>
                   </div>
                 ))}
@@ -493,61 +485,56 @@ export function ServicesPage() {
             </div>
 
             {/* Categorized Technologies */}
-            <div className="space-y-8 scroll-animate">
-              <h3 className="text-2xl md:text-3xl font-bold text-black text-center mb-8">
+            <div className="space-y-4 scroll-animate">
+              <h3 className="text-xl font-bold text-black text-center mb-6">
                 Complete Technology Stack
               </h3>
 
               {techStackCategories.map((category, categoryIndex) => (
                 <div
                   key={categoryIndex}
-                  className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg"
+                  className="bg-gray-50 rounded-xl overflow-hidden"
                 >
                   <button
                     onClick={() => toggleCategory(category.title)}
-                    className="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-100 transition-colors duration-300"
+                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-100 transition-colors duration-300"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-black text-white">
-                        <category.icon className="h-6 w-6" />
+                      <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-white">
+                        <category.icon className="h-4 w-4" />
                       </div>
                       <div className="text-left">
-                        <h4 className="text-xl font-bold text-black">
+                        <h4 className="text-lg font-bold text-black">
                           {category.title}
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-xs text-gray-600">
                           {category.technologies.length} technologies
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className="text-sm text-gray-500">
-                        {expandedCategories[category.title] ? "Hide" : "Show"}
-                      </span>
                       {expandedCategories[category.title] ? (
-                        <ChevronUp className="h-5 w-5 text-gray-500" />
+                        <ChevronUp className="h-4 w-4 text-gray-500" />
                       ) : (
-                        <ChevronDown className="h-5 w-5 text-gray-500" />
+                        <ChevronDown className="h-4 w-4 text-gray-500" />
                       )}
                     </div>
                   </button>
 
                   {expandedCategories[category.title] && (
-                    <div className="px-8 pb-8">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div className="px-6 pb-4">
+                      <div className="flex flex-wrap gap-2">
                         {category.technologies.map((tech, techIndex) => (
                           <div
                             key={techIndex}
-                            className={`relative flex items-center justify-between p-4 rounded-xl border-2 transition-all duration-300 hover:shadow-md hover:-translate-y-1 ${getProficiencyColor(
+                            className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105 ${getProficiencyColor(
                               tech.level
                             )}`}
                           >
-                            <div className="flex items-center space-x-2">
-                              {getProficiencyIcon(tech.level)}
-                              <span className="font-medium">{tech.name}</span>
-                            </div>
-                            <span className="text-xs opacity-80">
-                              {tech.years}
+                            {getProficiencyIcon(tech.level)}
+                            <span className="font-medium">{tech.name}</span>
+                            <span className="text-xs opacity-75">
+                              ({tech.years})
                             </span>
                           </div>
                         ))}
@@ -557,33 +544,20 @@ export function ServicesPage() {
                 </div>
               ))}
 
-              {/* Legend */}
-              <div className="bg-gray-50 rounded-2xl p-6 mt-8">
-                <h4 className="text-lg font-bold text-black mb-4 text-center">
-                  Proficiency Levels
-                </h4>
-                <div className="flex flex-wrap justify-center gap-4">
+              {/* Compact Legend */}
+              <div className="bg-gray-50 rounded-xl p-4">
+                <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-black rounded border-2 border-black flex items-center justify-center">
-                      <Star className="h-2 w-2 fill-current text-white" />
-                    </div>
-                    <span className="text-sm font-medium">
-                      Expert (5+ years)
-                    </span>
+                    <Star className="h-3 w-3 fill-current text-black" />
+                    <span>Expert (5+ years)</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-gray-800 rounded border-2 border-gray-800 flex items-center justify-center">
-                      <Star className="h-2 w-2 text-white" />
-                    </div>
-                    <span className="text-sm font-medium">
-                      Proficient (2-4 years)
-                    </span>
+                    <Star className="h-3 w-3 text-gray-800" />
+                    <span>Proficient (2-4 years)</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-gray-600 rounded border-2 border-gray-600"></div>
-                    <span className="text-sm font-medium">
-                      Familiar (1-2 years)
-                    </span>
+                    <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+                    <span>Familiar (1-2 years)</span>
                   </div>
                 </div>
               </div>
