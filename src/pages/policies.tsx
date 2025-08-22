@@ -98,10 +98,18 @@ export function PoliciesPage() {
               </div>
               <div className="grid gap-4 md:grid-cols-2">
                 {policies.map((policy, index) => (
-                  <a
+                  <button
                     key={policy.id}
-                    href={`#${policy.id}`}
-                    className="bg-gray-50 rounded-xl p-6 border border-gray-200/50 hover:shadow-2xl hover:shadow-3xl hover:bg-white/95 transition-all duration-500 hover:bg-gray-100 transition-all"
+                    onClick={() => {
+                      const element = document.getElementById(policy.id);
+                      if (element) {
+                        element.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }
+                    }}
+                    className="bg-gray-50 rounded-xl p-6 border border-gray-200/50 hover:shadow-2xl hover:bg-white/95 transition-all duration-500 text-left w-full"
                   >
                     <div className="flex items-center space-x-4">
                       <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black text-white shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 flex-shrink-0">
@@ -116,7 +124,7 @@ export function PoliciesPage() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
