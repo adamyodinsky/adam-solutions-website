@@ -217,7 +217,7 @@ export function HomePage() {
                     DevOps & Engineering Services
                   </h3>
                   <p className="text-lg text-gray-700">
-                    I help startups build robust infrastructure and scale
+                    I help startups build robust infrastructure at scale
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
                     <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">
