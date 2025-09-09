@@ -79,7 +79,7 @@ export function HomePage() {
                 I help startups with cloud infrastructure to fullstack web and
                 mobile apps —{" "}
                 <span className="font-bold text-black">
-                  I architect, build, and ship
+                  Architect, build, and ship
                 </span>{" "}
                 complete solutions that grow with your business.
               </p>

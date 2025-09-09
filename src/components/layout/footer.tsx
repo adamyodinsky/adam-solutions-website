@@ -31,8 +31,9 @@ export function Footer() {
             </div>
             <p className="text-gray-700 max-w-md font-body">
               Cloud infrastructure to fullstack web and mobile apps.
-              <br />I architect, build, and ship complete solutions that grow
-              with your business.
+              <br />
+              Architect, build, and ship complete solutions that grow with your
+              business.
             </p>
           </div>
 
