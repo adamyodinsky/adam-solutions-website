@@ -271,7 +271,7 @@ export function ProductsPage() {
                   <p className="text-lg text-gray-700">
                     Terminal-based ChatGPT assistant I built in Python. Provides
                     optimized, tailored answers for your machine's terminal.
-                    Over 1 million downloads and 230+ GitHub stars!
+                    Over 1 million downloads and 240+ GitHub stars!
                   </p>
 
                   <div className="flex flex-wrap gap-3 mt-4 justify-start">
