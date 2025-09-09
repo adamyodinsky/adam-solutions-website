@@ -27,10 +27,10 @@ export function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Adam Solutions - Software Engineer & Indie Developer</title>
+        <title>Adam Solutions - DevOps & Fullstack Engineering</title>
         <meta
           name="description"
-          content="Solo software engineer specializing in DevOps, Platform Engineering, Backend & Mobile apps. Creator of Circle app and ChatGPT-Kit extension."
+          content="DevOps & Fullstack Engineering. From infrastructure and CI/CD to web and mobile apps — I design, build, and ship end-to-end solutions."
         />
         <meta
           name="keywords"
@@ -64,8 +64,9 @@ export function HomePage() {
                 </h1>
                 <div className="flex items-center justify-center space-x-3 mb-6">
                   <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1 max-w-20"></div>
-                  <p className="text-xl md:text-2xl text-gray-600 font-subheading font-medium px-4">
-                    Software Engineer & Indie Developer
+                  <p className="text-xl md:text-2xl text-gray-600 font-subheading font-bold px-4">
+                    <span className="font-bold">DevOps</span> &{" "}
+                    <span className="font-bold">Fullstack Engineering</span>
                   </p>
                   <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1 max-w-20"></div>
                 </div>
@@ -75,16 +76,12 @@ export function HomePage() {
             {/* Value proposition */}
             <div className="animate-slide-up mb-10">
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto">
-                I build{" "}
-                <span className="font-semibold text-black">
-                  digital products
+                I help startups with cloud infrastructure to fullstack web and
+                mobile apps —{" "}
+                <span className="font-bold text-black">
+                  I architect, build, and ship
                 </span>{" "}
-                and help startups with
-                <span className="font-semibold text-black">
-                  {" "}
-                  DevOps, Platform Engineering, Backend & Mobile Apps
-                </span>{" "}
-                development. Let's make something awesome together.
+                complete solutions that grow with your business.
               </p>
             </div>
 
@@ -115,7 +112,9 @@ export function HomePage() {
               <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 font-body">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>Available for projects</span>
+                  <span>
+                    <span className="font-bold">Available</span> for projects
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -126,7 +125,7 @@ export function HomePage() {
                     className="hover:text-gray-800 transition-colors duration-200 hover:underline decoration-dotted underline-offset-4"
                     title="View LinkedIn profile"
                   >
-                    7+ years experience
+                    <span className="font-bold">7+ years</span> experience
                   </a>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -138,7 +137,8 @@ export function HomePage() {
                     className="hover:text-gray-800 transition-colors duration-200 hover:underline decoration-dotted underline-offset-4"
                     title="View AWS certification"
                   >
-                    AWS Certified Solutions Architect
+                    <span className="font-bold">AWS Certified</span> Solutions
+                    Architect
                   </a>
                 </div>
               </div>
@@ -157,11 +157,6 @@ export function HomePage() {
             <h2 className="text-3xl md:text-5xl font-bold text-black">
               What I Do
             </h2>
-            {/* <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              I build cool digital products and help startups with DevOps,
-              Platform Engineering, Backend development, and mobile apps. Let's
-              make something awesome together.
-            </p> */}
           </div>
 
           <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto scroll-animate">
@@ -214,10 +209,10 @@ export function HomePage() {
                 </div>
                 <div className="text-center space-y-4 mt-6">
                   <h3 className="text-3xl font-bold text-black">
-                    DevOps & Engineering Services
+                    DevOps & Fullstack Services
                   </h3>
                   <p className="text-lg text-gray-700">
-                    I help startups build robust infrastructure at scale
+                    Cloud infrastructure to fullstack web and mobile apps
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
                     <span className="bg-gray-100/80 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:bg-gray-200/80 transition-all duration-200">

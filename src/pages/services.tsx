@@ -47,50 +47,28 @@ export function ServicesPage() {
       icon: Server,
       title: "DevOps & Platform Engineering",
       description:
-        "I set up robust CI/CD pipelines, implement GitOps workflows, automate infrastructure, and create 10x more efficient deployment strategies.",
+        "I design and implement robust cloud infrastructure and deployment pipelines. From CI/CD to cloud architecture, I create scalable, secure, and cost-effective solutions that grow with your startup.",
       features: [
-        "CI/CD Pipeline Setup",
+        "Cloud Architecture (AWS, Azure, GCP)",
+        "CI/CD & GitOps Workflows",
         "Infrastructure as Code",
-        "GitOps Practices",
-        "Monitoring & Alerting",
-        "Performance Optimization",
-      ],
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
-      description:
-        "I design and build scalable cloud solutions on AWS, Azure, and GCP. Focus on cost-effective, secure, and maintainable architectures that grow with your startup.",
-      features: [
-        "Cloud Architecture",
-        "Auto-scaling Systems",
+        "Monitoring & Security",
         "Cost Optimization",
-        "Security Implementation",
+        "Auto-scaling Systems",
       ],
     },
     {
       icon: Code,
-      title: "Backend Development",
+      title: "Full Stack Development",
       description:
-        "I build robust APIs, microservices, and backend systems using modern technologies. Clean code, solid architecture, built to scale.",
+        "I build complete software solutions from backend to frontend. Using modern technologies, I create scalable APIs, robust microservices, and intuitive user interfaces that deliver great user experiences.",
       features: [
-        "Microservices Architecture",
-        "Event Driven Systems",
-        "Database Design",
+        "API & Microservices Development",
+        "Event-Driven Architecture",
+        "Database Design & Optimization",
+        "Frontend & Mobile Apps",
+        "Cross-platform Solutions",
         "Performance Optimization",
-      ],
-    },
-    {
-      icon: Database,
-      title: "Mobile Apps",
-      description:
-        "I create mobile applications with great UX and solid backend integration. Cross-platform solutions that work smoothly across devices.",
-      features: [
-        "Cross-platform Development",
-        "Native Performance",
-        "Backend Integration",
-        "App Store Deployment",
-        "Intuitive & Friendly UX",
       ],
     },
   ];
@@ -301,16 +279,14 @@ export function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>
-          DevOps, Platform Engineering & Backend Development | Adam Solutions
-        </title>
+        <title>DevOps & Full Stack Development | Adam Solutions</title>
         <meta
           name="description"
-          content="Solo software engineer specializing in DevOps, Platform Engineering, Backend development, and mobile apps. I help startups build and scale their tech infrastructure."
+          content="Solo software engineer specializing in DevOps, Platform Engineering, and Full Stack Development. I help startups build and scale their tech infrastructure and applications."
         />
         <meta
           name="keywords"
-          content="DevOps, Platform Engineering, Backend development, mobile apps, startup consulting, freelance developer"
+          content="DevOps, Platform Engineering, Full Stack Development, Cloud Infrastructure, Startup Engineering, Software Consulting"
         />
       </Helmet>
 

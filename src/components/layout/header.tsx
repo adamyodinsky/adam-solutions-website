@@ -33,7 +33,7 @@ export function Header() {
                   Adam Solutions
                 </span>
                 <span className="text-xs text-gray-600 font-body">
-                  DevOps & Digital Products
+                  DevOps & Fullstack Engineering
                 </span>
               </div>
             </Link>

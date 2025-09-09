@@ -25,14 +25,14 @@ export function Footer() {
                   Adam Solutions
                 </span>
                 <span className="text-sm text-gray-600 font-body">
-                  Software Engineer & Indie Developer
+                  DevOps & Fullstack Engineering
                 </span>
               </div>
             </div>
             <p className="text-gray-700 max-w-md font-body">
-              I help startups with DevOps, Platform Engineering, Backend
-              development, and mobile apps. Plus I build cool digital products
-              on the side.
+              Cloud infrastructure to fullstack web and mobile apps.
+              <br />I architect, build, and ship complete solutions that grow
+              with your business.
             </p>
           </div>
 
