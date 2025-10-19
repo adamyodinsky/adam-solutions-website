@@ -59,7 +59,7 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex">
             <Button asChild className="bg-black hover:bg-gray-800 text-white">
-              <a href="mailto:info@adam-solutions.io">Contact us</a>
+              <a href="mailto:info@adam-solutions.io">Contact</a>
             </Button>
           </div>
 
