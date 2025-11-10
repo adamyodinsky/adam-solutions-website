@@ -316,8 +316,8 @@ export function ServicesPage() {
                 What I Do
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
-                I specialize in the tech stack and tools that startups need to
-                move fast and scale smart
+                I specialize in the tech stack and tools that startups need for
+                moving fast and scale with ease.
               </p>
             </div>
 
