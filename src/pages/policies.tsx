@@ -73,7 +73,7 @@ export function PoliciesPage() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-4xl text-center space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-black">
-              Our Policies
+              My Policies
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto font-body leading-relaxed">
               Straightforward policies for working with me. No legal
